@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portafolio • Lenguaje de Programación 2 | FINESI - UNA Puno</title>
+  <style>
+    :root{
+      --bg:#0f172a;--card:#111827;--text:#e5e7eb;--muted:#94a3b8;--pri:#22d3ee;--acc:#a78bfa;
+      --ring:0 0 0 3px rgba(34,211,238,.3);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;background:linear-gradient(180deg,#0b1220,#111827);font:500 16px/1.6 system-ui,Segoe UI,Roboto,Ubuntu;color:var(--text)}
+    a{color:var(--pri);text-decoration:none}
+    header{position:sticky;top:0;backdrop-filter:saturate(140%) blur(6px);background:rgba(2,6,23,.6);border-bottom:1px solid rgba(148,163,184,.1);z-index:5}
+    .wrap{max-width:1050px;margin:auto;padding:16px}
+    .nav{display:flex;gap:12px;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:40px;height:40px;border-radius:12px;background:conic-gradient(from 180deg,var(--pri),var(--acc));box-shadow:0 8px 30px rgba(167,139,250,.35)}
+    .title{font-weight:800;letter-spacing:.2px}
+    .subtitle{font-size:12px;color:var(--muted)}
+    .btn{padding:10px 14px;border-radius:12px;background:var(--pri);color:#001016;font-weight:700;border:0}
+    main{padding:28px 16px}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center}
+    .hero .card{padding:22px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.00));border:1px solid rgba(148,163,184,.15);border-radius:18px;box-shadow:0 10px 30px rgba(2,6,23,.45)}
+    h1{margin:0 0 4px;font-size:clamp(24px,4vw,36px)}
+    .tag{display:inline-block;padding:4px 10px;border-radius:999px;background:rgba(34,211,238,.15);border:1px solid rgba(34,211,238,.35);font-size:12px;color:var(--text)}
+    .grid{display:grid;gap:16px;grid-template-columns:repeat(12,1fr)}
+    .col-4{grid-column:span 4}
+    .col-6{grid-column:span 6}
+    .col-12{grid-column:span 12}
+    .kpi{display:flex;gap:14px;align-items:center}
+    .kpi b{font-size:20px}
+    section h2{margin:8px 0 4px;font-size:20px}
+    ul{margin:8px 0 0 18px}
+    li{margin:6px 0}
+    input,textarea{width:100%;padding:12px;border-radius:12px;background:#0b1220;border:1px solid rgba(148,163,184,.25);color:var(--text)}
+    input:focus,textarea:focus{outline:none;box-shadow:var(--ring);border-color:var(--pri)}
+    .pill{display:inline-flex;gap:8px;flex-wrap:wrap}
+    .pill a{padding:6px 10px;border-radius:999px;border:1px solid rgba(148,163,184,.25)}
+    footer{margin:30px 0 60px;color:var(--muted);text-align:center}
+    @media (max-width: 860px){.hero{grid-template-columns:1fr}.col-4{grid-column:span 12}.col-6{grid-column:span 12}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <div class="title">Portafolio — Lenguaje de Programación 2</div>
+          <div class="subtitle">FINESI · Universidad Nacional del Altiplano, Puno</div>
+        </div>
+      </div>
+      <a class="btn" href="#actividades">Ver actividades</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="card">
+        <span class="tag">Ciclo 2025-II</span>
+        <h1>Hola, soy <span style="color:var(--pri)">Sadith Lina Apaza</span> 👋</h1>
+        <p>Este portafolio registra mis trabajos, prácticas y proyectos del curso <b>Lenguaje de Programación 2</b> en FINESI, UNA Puno. Aquí organizaré evidencias, apuntes y reflexiones semanales.</p>
+        <div class="pill" style="margin-top:10px">
+          <a href="#actividades">Actividades</a>
+          <a href="#proyectos">Proyectos</a>
+          <a href="#recursos">Recursos</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+      </div>
+      <div class="card" aria-label="resumen">
+        <div class="grid">
+          <div class="col-12 kpi"><b>Semana actual:</b> <span>—</span></div>
+          <div class="col-6 kpi"><b>Prácticas:</b> <span>0</span></div>
+          <div class="col-6 kpi"><b>Proyectos:</b> <span>0</span></div>
+          <div class="col-12" style="color:var(--muted)">Actualiza estos contadores a medida que avances.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="actividades" class="grid" style="margin-top:20px">
+      <div class="col-12"><h2>📌 Actividades del curso</h2><p class="subtitle">Lista preparada para registrar cada entrega (fecha, tema, enlace y reflexión breve).</p></div>
+
+      <article class="col-4 card" style="padding:16px">
+        <h3>Semana 1 — Introducción</h3>
+        <ul>
+          <li><b>Fecha:</b> 2025-08-19</li>
+          <li><b>Tema:</b> Repaso POO y Git</li>
+          <li><b>Entrega:</b> <a href="#">Repositorio inicial</a></li>
+          <li><b>Reflexión:</b> —</li>
+        </ul>
+      </article>
+
+      <article class="col-4 card" style="padding:16px">
+        <h3>Semana 2 — Estructuras de datos</h3>
+        <ul>
+          <li><b>Fecha:</b> 2025-08-26</li>
+          <li><b>Tema:</b> Listas, colas y pilas</li>
+          <li><b>Entrega:</b> <a href="#">Práctica 01</a></li>
+          <li><b>Reflexión:</b> —</li>
+        </ul>
+      </article>
+
+      <article class="col-4 card" style="padding:16px">
+        <h3>Semana 3 — Archivos</h3>
+        <ul>
+          <li><b>Fecha:</b> 2025-09-02</li>
+          <li><b>Tema:</b> I/O y serialización</li>
+          <li><b>Entrega:</b> <a href="#">Práctica 02</a></li>
+          <li><b>Reflexión:</b> —</li>
+        </ul>
+      </article>
+
+      <article class="col-4 card" style="padding:16px">
+        <h3>Semana 4 — Excepciones</h3>
+        <ul>
+          <li><b>Fecha:</b> 2025-09-09</li>
+          <li><b>Tema:</b> Manejo de errores</li>
+          <li><b>Entrega:</b> <a href="#">Práctica 03</a></li>
+          <li><b>Reflexión:</b> —</li>
+        </ul>
+      </article>
+
+      <article class="col-4 card" style="padding:16px">
+        <h3>Semana 5 — GUI/Web</h3>
+        <ul>
+          <li><b>Fecha:</b> 2025-09-16</li>
+          <li><b>Tema:</b> Interfaces</li>
+          <li><b>Entrega:</b> <a href="#">Mini app</a></li>
+          <li><b>Reflexión:</b> —</li>
+        </ul>
+      </article>
+
+      <article class="col-4 card" style="padding:16px">
+        <h3>Semana 6 — Concurrencia</h3>
+        <ul>
+          <li><b>Fecha:</b> 2025-09-23</li>
+          <li><b>Tema:</b> Hilos y async</li>
+          <li><b>Entrega:</b> <a href="#">Práctica 04</a></li>
+          <li><b>Reflexión:</b> —</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="proyectos" class="grid" style="margin-top:20px">
+      <div class="col-12"><h2>🧪 Proyectos</h2><p class="subtitle">Espacio para el proyecto integrador y pruebas.</p></div>
+      <div class="col-6 card" style="padding:16px">
+        <h3>Proyecto Integrador</h3>
+        <p>Descripción breve del problema, objetivos y tecnologías.</p>
+        <p><b>Repositorio:</b> <a href="#">enlace</a> · <b>Demo:</b> <a href="#">enlace</a></p>
+      </div>
+      <div class="col-6 card" style="padding:16px">
+        <h3>Bitácora</h3>
+        <ul>
+          <li>[dd/mm] avance — notas</li>
+          <li>[dd/mm] avance — notas</li>
+          <li>[dd/mm] avance — notas</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="recursos" class="grid" style="margin-top:20px">
+      <div class="col-12"><h2>📚 Recursos</h2><p class="subtitle">Apuntes, lecturas y enlaces útiles.</p></div>
+      <div class="col-12 card" style="padding:16px">
+        <ul>
+          <li>Guía del curso (PDF) — <a href="#">descargar</a></li>
+          <li>Estándar de codificación — <a href="#">enlace</a></li>
+          <li>Checklist de entrega — <a href="#">enlace</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contacto" class="grid" style="margin-top:20px">
+      <div class="col-12"><h2>📬 Contacto</h2><p class="subtitle">Para dudas o retroalimentación.</p></div>
+      <div class="col-6 card" style="padding:16px">
+        <form>
+          <label>Nombre</label>
+          <input placeholder="Tu nombre" />
+          <label style="margin-top:8px;display:block">Correo</label>
+          <input type="email" placeholder="tucorreo@una.pe" />
+          <label style="margin-top:8px;display:block">Mensaje</label>
+          <textarea rows="4" placeholder="Escribe aquí..."></textarea>
+          <button class="btn" style="margin-top:10px">Enviar</button>
+        </form>
+      </div>
+      <div class="col-6 card" style="padding:16px">
+        <h3>Datos</h3>
+        <p><b>Estudiante:</b> Sadith Lina Apaza</p>
+        <p><b>Escuela:</b> FINESI — UNA Puno</p>
+        <p><b>Correo:</b> sadithlinaapaza@gmail.com</p>
+        <p><b>Teléfono:</b> 971 065 139</p>
+      </div>
+    </section>
+
+    <footer>© 2025 • Portafolio académico LP2 — FINESI, UNA Puno</footer>
+  </main>
+</body>
+</html>
