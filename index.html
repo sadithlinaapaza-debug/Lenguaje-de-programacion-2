@@ -88,34 +88,39 @@
         <ul>
           <li><b>Fecha:</b> 2025-09-09</li>
           <li><b>Tema:</b> funciones</li>
-          <li><b>Entrega:</b> <a href="#">import re
+          <li><b>Entrega:</b> <a href="#">Repositorio inicial</a></li>
+          <li><b> </b> —</li>
+          <section class="card" style="margin-top:12px">
+  <h2>📝 Tarea — Analizador de Funciones</h2>
+  <p>Script en Python que detecta variables y operaciones en una función matemática ingresada por el usuario.</p>
+  <pre style="background:#0b1220;color:#e6eef8;padding:14px;border-radius:10px;overflow-x:auto">
+class Analizador:
+    def __init__(self, funcion):
+        self.funcion = funcion
 
-def analizar_expresion(expresion):
-    variables = re.findall(r'[a-zA-Z_]\w*', expresion)
+    def obtener_variables(self):
+        variables = []
+        for caracter in self.funcion:
+            if caracter.isalpha() and caracter not in variables:
+                variables.append(caracter)
+        return variables
 
-    operaciones = []
-    if "+" in expresion:
-        operaciones.append("suma (+)")
-    if "-" in expresion:
-        operaciones.append("resta (-)")
-    if "*" in expresion:
-        operaciones.append("multiplicación (*)")
-    if "/" in expresion:
-        operaciones.append("división (/)")
-    if "" in expresion:
-        operaciones.append("potencia ()")
+    def obtener_operaciones(self):
+        operaciones = []
+        for caracter in self.funcion:
+            if caracter in "+-*/":
+                operaciones.append(caracter)
+        return operaciones
 
-    return set(variables), operaciones
+funcion = input("Escribe una función matemática: ")
+analizador = Analizador(funcion)
+print("\\n RESULTADO ")
+print("Variables encontradas:", analizador.obtener_variables())
+print("Operaciones encontradas:", analizador.obtener_operaciones())
+  </pre>
+</section>
 
-expresion = input("Escribe una función o expresión matemática: ")
-
-variables, operaciones = analizar_expresion(expresion)
-
-print("\n--- RESULTADO ---")
-print("Expresión ingresada:", expresion)
-print("Variables encontradas:", variables if variables else "Ninguna")
-print("Operaciones encontradas:", operaciones if operaciones else "Ninguna")</a></li>
-
+          <li><b>Reflexión:</b> —</li>
         </ul>
       </article>
 
