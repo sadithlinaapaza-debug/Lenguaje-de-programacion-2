@@ -84,12 +84,38 @@
       <div class="col-12"><h2>📌 Actividades del curso</h2><p class="subtitle">Lista preparada para registrar cada entrega (fecha, tema, enlace y reflexión breve).</p></div>
 
       <article class="col-4 card" style="padding:16px">
-        <h3>Semana 1 — Introducción</h3>
+        <h3>Semana 1 — codigo</h3>
         <ul>
-          <li><b>Fecha:</b> 2025-08-19</li>
-          <li><b>Tema:</b> Repaso POO y Git</li>
-          <li><b>Entrega:</b> <a href="#">Repositorio inicial</a></li>
-          <li><b>Reflexión:</b> —</li>
+          <li><b>Fecha:</b> 2025-09-09</li>
+          <li><b>Tema:</b> funciones</li>
+          <li><b>Entrega:</b> <a href="#">import re
+
+def analizar_expresion(expresion):
+    variables = re.findall(r'[a-zA-Z_]\w*', expresion)
+
+    operaciones = []
+    if "+" in expresion:
+        operaciones.append("suma (+)")
+    if "-" in expresion:
+        operaciones.append("resta (-)")
+    if "*" in expresion:
+        operaciones.append("multiplicación (*)")
+    if "/" in expresion:
+        operaciones.append("división (/)")
+    if "" in expresion:
+        operaciones.append("potencia ()")
+
+    return set(variables), operaciones
+
+expresion = input("Escribe una función o expresión matemática: ")
+
+variables, operaciones = analizar_expresion(expresion)
+
+print("\n--- RESULTADO ---")
+print("Expresión ingresada:", expresion)
+print("Variables encontradas:", variables if variables else "Ninguna")
+print("Operaciones encontradas:", operaciones if operaciones else "Ninguna")</a></li>
+
         </ul>
       </article>
 
