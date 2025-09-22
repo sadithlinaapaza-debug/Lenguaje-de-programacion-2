@@ -139,48 +139,711 @@ mi_coche.mostrar_info()
 mi_coche.arrancar()
 </code></pre>
 </div>
-        <div class="card"><h3>Ejercicio 2</h3><textarea ="Pega aquí tu código en Python..."></textarea></div>
-        <div class="card"><h3>Ejercicio 3</h3><textarea placeholder="Pega aquí tu código en Python..."></textarea></div>
-        <div class="card"><h3>Ejercicio 4</h3><textarea placeholder="Pega aquí tu código en Python..."></textarea></div>
-      </div>
+        <div class="card"><h3>Ejercicio 2</h3><!-- Bloque de código Python en modo solo lectura -->
+<pre><code class="language-python">
+class Pitagoras:
+    def __init__(self,catetoa,catetob):
+       self.catetoa = catetoa
+       self.catetob = catetob
+
+    def calcular_hipotenusa(self):
+        return (self.catetoa**2 + self.catetob**2)**(1/2)
+
+#Solicitud
+catetoa = float(input("Ingrese cateto a = "))
+catetob = float(input("Ingrese cateto b = "))
+
+operacion = Pitagoras(catetoa,catetob)
+
+print("La hipotenusa es ",operacion.calcular_hipotenusa())   
+</code></pre>
+</div>
+        <div class="card"><h3>Ejercicio 3</h3><!-- Bloque de código Python en modo solo lectura -->
+<pre><code class="language-python">
+  class Rectangulo:
+    def __init__(self,base,altura):
+        self.base = base
+        self.altura = altura
+
+    def area(self):
+        return (self.base * self.altura)
+
+    def perimetro(self):
+        return (self.base*2 + self.altura*2)
+
+operacion_area = Rectangulo(5,6)
+operacion_perimetro = Rectangulo(5,6)
+
+print("El area es ",operacion_area.area())
+
+print("El perimetro es ",operacion_perimetro.perimetro())
+</code></pre>
+</div>
+        <div class="card"><h3>Ejercicio 4</h3><!-- Bloque de código Python en modo solo lectura -->
+<pre><code class="language-python">
+  class CantidadLadrillos:
+    def __init__(self,longuitud,altura,ancho,Jh,Jv):
+        self.longuitud = longuitud
+        self.altura = altura
+        self.ancho = ancho
+        self.Jh = 0.015
+        self.Jv = 0.015
+
+    def Cantidad_de_ladrillos(self):
+        return (1/((longuitud + Jh) * (altura + Jv)))
+
+#Solicitar
+
+longuitud = float(input("Ingresar longuitud: "))
+altura = float(input("Ingresar altura: "))
+ancho = float(input("Ingresar ancho: "))
+Jh = 0.015
+Jv = 0.015
+
+operacion = CantidadLadrillos(longuitud,altura,ancho,Jh,Jv)
+print("La cantidad es ",operacion.Cantidad_de_ladrillos(),"m^2 sin desperdicio")
+print("La cantidad es ",operacion.Cantidad_de_ladrillos()*1.05,"m^2 con desperdicio")
+print("el area",operacion.Cantidad_de_ladrillos()*8.05*ancho,"m^2")
+  
+</code></pre>
+</div>
+    </div>
     </section>
 
     <section>
       <h2>Estructura Selectiva</h2>
       <div class="grid">
-        <div class="card"><h3>Ejercicio 5</h3><textarea placeholder="Pega aquí tu código en Python..."></textarea></div>
-        <div class="card"><h3>Ejercicio 6</h3><textarea placeholder="Pega aquí tu código en Python..."></textarea></div>
-        <div class="card"><h3>Ejercicio 7</h3><textarea placeholder="Pega aquí tu código en Python..."></textarea></div>
-        <div class="card"><h3>Tarea 1: Signos del Zodiaco</h3><textarea placeholder="Pega aquí tu código en Python..."></textarea></div>
+        <div class="card"><h3>Ejercicio 5</h3><!-- Bloque de código Python en modo solo lectura -->
+<pre><code class="language-python">
+class Numero:
+    def __init__(self,valor):
+        self.valor = valor
+
+    def clasificar(self):
+        if self.valor == 0:
+            return "Nulo"
+        elif self.valor%2 == 0:
+            return "Par"
+        else:
+            return "Impar"
+ejemplos = [Numero(0),Numero(2),Numero(5)]
+
+for num in ejemplos:
+    tipo = num.clasificar()
+    print(f"El numero {num.valor} es {tipo}")
+  
+</code></pre>
+</div>
+        <div class="card"><h3>Ejercicio 6</h3><!-- Bloque de código Python en modo solo lectura -->
+<pre><code class="language-python">
+class Persona:
+    def __init__(self,nombre,edad):
+        self.nombre = nombre
+        self.edad = edad
+
+    def es_mayor_de_edad(self):
+        if self.edad >= 18:
+            return True
+        else:
+            return False 
+
+persona = Persona("Maria",25)
+
+if persona.es_mayor_de_edad():
+    print(f"La persona {persona.nombre} es mayor de edad")
+
+else:
+    print(f"La persona {persona.nombre} es menor de edad")  
+</code></pre>
+</div>
+        <div class="card"><h3>Ejercicio 7</h3><!-- Bloque de código Python en modo solo lectura -->
+<pre><code class="language-python">
+class Empleado:
+    def __init__(self,Nombre,Cargo,Salario):
+        self.Nombre = Nombre
+        self.Cargo = Cargo
+        self.Salario = Salario
+
+    def AplicarAumento(self):
+        if self.Cargo == "Gerente":
+            porcentaje = 0.1
+        elif self.Cargo == "Supervisor":
+            porcentaje = 0.07
+        elif self.Cargo == "Operario":
+            porcentaje = 0.05
+        else:
+            porcentaje = 0
+
+        NuevoSalario = self.Salario *(1 + porcentaje)
+        return NuevoSalario
+    
+Nombre = float(input("Ingrese Nombre"))
+Cargo = float(input("Ingrese Cargo"))
+Salarion = float(input("Ingrese Salario"))
+
+nuevo = self.Salario *(1 + porcentaje)
+    
+print(f"{emp.Nombre} {emp.Cargo}: salario nuevo = {nuevo:2f}")  
+</code></pre>
+</div>
+        <div class="card"><h3>Tarea 1: Signos del Zodiaco</h3><!-- Bloque de código Python en modo solo lectura -->
+<pre><code class="language-python">
+class Persona:
+    def __init__(self, nombre, dia, mes):
+        self.nombre = nombre
+        self.dia = dia
+        self.mes = mes
+
+    def signo(self):
+        if (self.mes == "enero" and self.dia >= 20) or (self.mes == "febrero" and self.dia <= 18):
+            return "Acuario"
+        elif (self.mes == "febrero" and self.dia >= 19) or (self.mes == "marzo" and self.dia <= 20):
+            return "Piscis"
+        elif (self.mes == "marzo" and self.dia >= 21) or (self.mes == "abril" and self.dia <= 19):
+            return "Aries"
+        elif (self.mes == "abril" and self.dia >= 20) or (self.mes == "mayo" and self.dia <= 20):
+            return "Tauro"
+        elif (self.mes == "mayo" and self.dia >= 21) or (self.mes == "junio" and self.dia <= 20):
+            return "Géminis"
+        elif (self.mes == "junio" and self.dia >= 21) or (self.mes == "julio" and self.dia <= 22):
+            return "Cáncer"
+        elif (self.mes == "julio" and self.dia >= 23) or (self.mes == "agosto" and self.dia <= 22):
+            return "Leo"
+        elif (self.mes == "agosto" and self.dia >= 23) or (self.mes == "septiembre" and self.dia <= 22):
+            return "Virgo"
+        elif (self.mes == "septiembre" and self.dia >= 23) or (self.mes == "octubre" and self.dia <= 22):
+            return "Libra"
+        elif (self.mes == "octubre" and self.dia >= 23) or (self.mes == "noviembre" and self.dia <= 21):
+            return "Escorpio"
+        elif (self.mes == "noviembre" and self.dia >= 22) or (self.mes == "diciembre" and self.dia <= 21):
+            return "Sagitario"
+        elif (self.mes == "diciembre" and self.dia >= 22) or (self.mes == "enero" and self.dia <= 19):
+            return "Capricornio"
+        else:
+            return "Fecha inválida"
+
+nombre = input("Ingresa tu nombre: ")
+dia = float(input("Ingresa tu día de nacimiento: "))
+mes = input("Ingresa tu mes de nacimiento: ")
+
+persona = Persona(nombre,dia,mes)
+print(f"{persona.nombre} nacio el {persona.dia} de {persona.mes} y tu signo es {persona.signo()}")  
+</code></pre>
+</div>
       </div>
     </section>
 
     <section>
       <h2>Estructura Repetitiva</h2>
       <div class="grid">
-        <div class="card"><h3>Ejercicio 8</h3><textarea placeholder="Pega aquí tu código en Python..."></textarea></div>
-        <div class="card"><h3>Ejercicio 9</h3><textarea placeholder="Pega aquí tu código en Python..."></textarea></div>
-        <div class="card"><h3>Ejercicio 10</h3><textarea placeholder="Pega aquí tu código en Python..."></textarea></div>
-        <div class="card"><h3>Ejercicio 11</h3><textarea placeholder="Pega aquí tu código en Python..."></textarea></div>
-        <div class="card"><h3>Tarea 2: Calculadora Estadística</h3><textarea placeholder="Pega aquí tu código en Python..."></textarea></div>
-        <div class="card"><h3>Ejercicio 12</h3><textarea placeholder="Pega aquí tu código en Python..."></textarea></div>
-        <div class="card"><h3>Ejercicio 13</h3><textarea placeholder="Pega aquí tu código en Python..."></textarea></div>
-        <div class="card"><h3>Ejercicio 14</h3><textarea placeholder="Pega aquí tu código en Python..."></textarea></div>
-        <div class="card"><h3>Ejercicio 15</h3><textarea placeholder="Pega aquí tu código en Python..."></textarea></div>
-        <div class="card"><h3>Ejercicio 16</h3><textarea placeholder="Pega aquí tu código en Python..."></textarea></div>
-        <div class="card"><h3>Ejercicio 17</h3><textarea placeholder="Pega aquí tu código en Python..."></textarea></div>
-        <div class="card"><h3>Ejercicio 18</h3><textarea placeholder="Pega aquí tu código en Python..."></textarea></div>
+        <div class="card"><h3>Ejercicio 8</h3><!-- Bloque de código Python en modo solo lectura -->
+<pre><code class="language-python">
+class Factorial:
+    def __init__(self,numero):
+        self.numero = numero
+        self.resultado = 1
+
+    def calcular(self):
+        if self.numero < 0:
+            print("El factorial no esta definido para numeros negativos")
+            return None
+        for i in range(1,self.numero+1):
+            self.resultado *= i
+        return self.resultado
+
+def main():
+        miFactorial = Factorial(5)
+        resultado = miFactorial.calcular()
+        if resultado is not None:
+            print(f"El factorial de {miFactorial.numero} es {resultado}")
+if __name__=="__main__":
+    main()   
+</code></pre>
+</div>
+        <div class="card"><h3>Ejercicio 9</h3><!-- Bloque de código Python en modo solo lectura -->
+<pre><code class="language-python">
+class Fibonaci:
+    def __init__(self,cantidad):
+        self.cantidad = cantidad
+        self.serie = []
+
+    def generarSerie(self):
+        a,b =0,1
+        for _ in range(self.cantidad):
+            self.serie.append(a)
+            a,b=b,a+b
+        return self.serie
+
+def main():
+    miFibonaci = Fibonaci(10)
+    resultado = miFibonaci.generarSerie()
+    print(resultado)
+if __name__=="__main__":
+    main()   
+</code></pre>
+</div>
+        <div class="card"><h3>Ejercicio 10</h3><!-- Bloque de código Python en modo solo lectura -->
+<pre><code class="language-python">
+class TabladeMultiplicar:
+    def __init__(self,numero):
+        self.numero = numero
+
+    def generarTabla(self):
+        for i in range(1, 11):
+            resultado = self.numero*i
+            print(f"{self.numero} x {i} = {resultado}")
+
+def main():
+    numero = int(input("Ingrese un numero "))
+    miTabla = TabladeMultiplicar(numero)
+    miTabla.generarTabla()
+
+if __name__=="__main__":
+    main()
+   
+</code></pre>
+</div>
+        <div class="card"><h3>Ejercicio 11</h3><!-- Bloque de código Python en modo solo lectura -->
+<pre><code class="language-python">
+class SumaNaturales:
+    def __init__(self, limite, ):
+        self.limite = limite
+        self.suma = 0
+
+    def calcularSuma(self):
+        for i in range(0,self.limite + 1):
+            self.suma = self.suma + i
+        return self.suma
+
+def main():
+    
+    miSuma = SumaNaturales(10)
+    resultado = miSuma.calcularSuma()
+    print(f"La suma de los primeros {miSuma.limite} numero es: {resultado}")
+
+if __name__=="__main__":
+    main()
+
+</code></pre>
+</div>
+        <div class="card"><h3>Tarea 2: Calculadora Estadística</h3><!-- Bloque de código Python en modo solo lectura -->
+<pre><code class="language-python">
+class CalculadoraEstadistica:
+    def __init__(self, lista, numero):
+        self.lista = lista
+        self.numero = numero
+
+    def ingresar_datos(self):
+        datos = input("Ingrese los datos: ")
+        self.lista = []
+        for i in datos.split():
+            self.numero = float(i)
+            self.lista.append(self.numero)
+
+    def media(self):
+        total = 0
+        contador = 0
+        for i in self.lista:
+            total = total + i
+            contador = contador + 1
+        if contador == 0:
+            return 0
+        return total / contador
+
+    def varianza(self):
+        m = self.media()
+        suma = 0
+        contador = 0
+        for i in self.lista:
+            suma = suma + (i - m) ** 2
+            contador = contador + 1
+        if contador == 0:
+            return 0
+        return suma / contador
+
+    def desviacion_estandar(self):
+        return self.varianza() ** 0.5
+
+CalculadoraDatos = CalculadoraEstadistica([], 0)
+
+CalculadoraDatos.ingresar_datos()
+
+print("Media:", CalculadoraDatos.media())
+print("Varianza:", CalculadoraDatos.varianza())
+print("Desviación estándar:", CalculadoraDatos.desviacion_estandar())
+</code></pre>
+</div>
+        <div class="card"><h3>Ejercicio 12</h3><!-- Bloque de código Python en modo solo lectura -->
+<pre><code class="language-python">
+class NumeroNatural:
+    def __init__(self, valor):
+        self.valor = valor
+
+    def mostrar(self):
+        print(f"Número natural: {self.valor}")
+
+def main():
+    i = 1
+    while i <= 10:
+        numero = NumeroNatural(i)
+        numero.mostrar()
+        i += 1
+
+if __name__ == "__main__":
+    main()
+</code></pre>
+</div>
+        <div class="card"><h3>Ejercicio 13</h3><!-- Bloque de código Python en modo solo lectura -->
+<pre><code class="language-python">
+  class NumeroMultiplo:
+    def __init__(self, valor):
+        self.valor = valor
+
+    def mostrar_multiplo(self):
+        if self.valor == 0:
+            print(f"El {self.valor} es número nulo")
+
+        elif self.valor % 3 == 0 and self.valor % 5 == 0:
+            print(f"Número: {self.valor} es múltiplo de 3 y de 5")
+        elif self.valor % 3 == 0:
+            print(f"Número: {self.valor} es múltiplo de 3")
+        elif self.valor % 5 == 0:
+            print(f"Número: {self.valor} es múltiplo de 5")
+        else:
+            print(f"Número: {self.valor} No es múltiplo de 3 ni de 5")
+
+        print("-" * 60)
+
+
+def main():
+    i = 0
+    while i <= 10:
+        numero = NumeroMultiplo(i)  
+        numero.mostrar_multiplo()
+        i += 1
+
+if __name__ == "__main__":  
+    main()
+
+</code></pre>
+</div>
+        <div class="card"><h3>Ejercicio 14</h3><!-- Bloque de código Python en modo solo lectura -->
+<pre><code class="language-python">
+class Fibonacci:
+    def __init__(self,cantidad):
+        self.cantidad = cantidad
+        self.a = 0
+        self.b = 1
+        self.contador = 0
+    def generarSerie(self):
+        print("Serie de Fibonacci")
+        while self.contador < self.cantidad:
+            print(self.a , end = " ")
+            c = self.a + self.b
+            self.a = self.b
+            self.b = c
+            self.contador+=1
+
+def main():
+    miFibonacci = Fibonacci(10)
+    miFibonacci.generarSerie()
+if __name__=="__main__":
+    main()
+</code></pre>
+</div>
+        <div class="card"><h3>Ejercicio 15</h3><!-- Bloque de código Python en modo solo lectura -->
+<pre><code class="language-python">
+  class Numero:
+    def __init__(self,cantidad):
+        self.cantidad = cantidad
+        self.contador = 0
+    def generarNumero(self):
+        print("Imprimir Numero")
+        while self.contador <= self.cantidad:
+            print(self.contador , end = " ")
+            self.contador+=1
+
+def main():
+    miNumero = Numero(10)
+    miNumero.generarNumero()
+if __name__=="__main__":
+    main()
+</code></pre>
+</div>
+        <div class="card"><h3>Ejercicio 16</h3><!-- Bloque de código Python en modo solo lectura -->
+<pre><code class="language-python">
+class CalculadoraSuma:
+    def __init__(self):
+        self.total = 0
+        
+    def sumarNumero(self):
+        print("Calcular la suma de numeros ingresados")
+        print("Escribe numeros para sumar. Escribr 'fin' para terminar")
+        entrada=""
+        while entrada.lower() != "fin":
+            entrada = input("Ingrese un numero: ")
+            if entrada.isdigit():
+                self.total+= int(entrada)
+
+            elif entrada.lower() != "fin":
+                print("Entrada invalida: Ecribir un numero o 'fin' ")
+        print(f"La suma total es: {self.total}")
+
+def main():
+    calculadora = CalculadoraSuma()
+    calculadora.sumarNumero()
+if __name__=="__main__":
+    main()  
+</code></pre>
+</div>
+        <div class="card"><h3>Ejercicio 17</h3><!-- Bloque de código Python en modo solo lectura -->
+<pre><code class="language-python">
+class CalculadoraSuma:
+    def __init__(self):
+        self.total = 0
+        
+    def sumarNumero(self):
+        print("Calcular la suma de numeros ingresados")
+        print("Escribe numeros para sumar. Escribr 'fin' para terminar")
+        entrada=""
+        while entrada.lower() != "fin":
+            entrada = input("Ingrese un numero: ")
+            
+            if entrada.isdigit():
+                numero = 
+                self.total+= int(entrada)
+
+            elif entrada.lower() != "fin":
+                print("Entrada invalida: Ecribir un numero o 'fin' ")
+        print(f"La suma total es: {self.total}")
+
+def main():
+    calculadora = CalculadoraSuma()
+    calculadora.sumarNumero()
+if __name__=="  
+</code></pre>
+</div>
+        <div class="card"><h3>Ejercicio 18</h3><!-- Bloque de código Python en modo solo lectura -->
+<pre><code class="language-python">
+class GestorTareas:
+    def __init__(self):
+        self.tareas = []
+
+    def agregar_tareas(self,tarea):
+        self.tareas.append(tarea)
+        print("tarea agregada")
+
+    def mostrar_tareas(self):
+        if not self.tareas:
+            print("No hay tareaspendientes")
+
+        else:
+            print("Tareas pendientes")
+            for i, tarea in enumerate(self.tareas,1):
+                print(f"{i} {tarea}")
+
+mi_gestor = GestorTareas()
+
+while True:
+    print("\n ----MENU----")
+    print("1.Agregar tarea ")
+    print("2.Mostrar tareas ")
+    print("3.Salir" )
+    opcion = input("Seleccione una opcion: ")
+
+    if opcion == "1":
+        tarea = input("Escribe la tarea: ")
+        mi_gestor.agregar_tareas(tarea)
+    elif opcion == "2":
+        mi_gestor.mostrar_tareas()
+    elif opcion =="3":
+        print("Saliendo del gestor de tareas")
+        break
+    else:
+        print("Opcion no valida. Intente de nuevo")  
+</code></pre>
+</div>
       </div>
     </section>
 
     <section>
       <h2>Encapsulamiento</h2>
       <div class="grid">
-        <div class="card"><h3>Ejercicio 19</h3><textarea placeholder="Pega aquí tu código en Python..."></textarea></div>
-        <div class="card"><h3>Ejercicio 20</h3><textarea placeholder="Pega aquí tu código en Python..."></textarea></div>
-        <div class="card"><h3>Ejercicio 21</h3><textarea placeholder="Pega aquí tu código en Python..."></textarea></div>
-        <div class="card"><h3>Ejercicio 22</h3><textarea placeholder="Pega aquí tu código en Python..."></textarea></div>
-        <div class="card"><h3>Ejercicio 23</h3><textarea placeholder="Pega aquí tu código en Python..."></textarea></div>
+        <div class="card"><h3>Ejercicio 19</h3><!-- Bloque de código Python en modo solo lectura -->
+<pre><code class="language-python">
+class leerNumero:
+    def __init__(self,numero):
+        self.numero = numero
+
+    def Rango_Numero(self):
+        if 1 <= self.numero <= 10:
+            print(f"El numero {self.numero} esta dentro de los 10 primeros")
+        elif self.numero < 1:
+            diferencia = 0 - self.numero
+            print(f"El numero {self.numero} es {diferencia} menos que 1")
+        else:
+            diferencia = self.numero - 10
+            print(f"El numero {self.numero} es {diferencia} mas que 10")
+
+def main():
+    valor = int(input("Ingresa un numero del 1 al 10: "))
+    numero = leerNumero(valor)
+    numero.Rango_Numero()
+if __name__=="__main__":
+    main()
+</code></pre>
+</div>
+        <div class="card"><h3>Ejercicio 20</h3><!-- Bloque de código Python en modo solo lectura -->
+<pre><code class="language-python">
+class Persona:
+    def __init__(self,nombre,edad):
+        self.__nombre = nombre #atributo privado
+        self.__edad = edad #atributo privado
+
+    def get_edad(self):
+        return self.__edad
+
+    def get_nombre(self):
+        return self.__nombre
+
+    def set_edad(self,nueva_edad):
+        if nueva_edad > 0:
+            self.__edad = nueva_edad
+        else:
+            print("Edad no valida")
+
+    def set_nombre(self,nuevo_nombre):
+        self.__nombre = nuevo_nombre
+        return self.__nombre
+    
+persona = Persona("Ana",30)
+print(persona.get_nombre())
+print(persona.get_edad())
+print(persona.get_nombre(),persona.get_edad())
+
+persona.set_edad(35)
+persona.set_nombre("Maria")
+print(persona.get_edad())
+print(persona.get_nombre())
+print(persona.get_nombre(),persona.get_edad())
+</code></pre>
+</div>
+        <div class="card"><h3>Ejercicio 21</h3><!-- Bloque de código Python en modo solo lectura -->
+<pre><code class="language-python">
+import math  
+class Circulo:
+    def __init__(self,radio):
+        self.__radio
+
+        def get_radio(self):
+            return self.__radio
+
+        def set_radio(self,nueva_radio):
+            if nueva_radio > 0:
+               self.__radio = nueva_radio
+            else:
+               print("Radio no valida")
+
+        def calcular_area(self):
+            return math.pi*self.__radio**2
+
+        def calcular_perimetro(self):
+            return 2*math.pi*self.__radio
+
+circulo = Circulo(3)
+print("Area del circulo",round(circulo.calcular_area(),2))
+print("Area del perimetro",round(circulo.calcular_perimetro(),2))
+</code></pre>
+</div>
+        <div class="card"><h3>Ejercicio 22</h3><!-- Bloque de código Python en modo solo lectura -->
+<pre><code class="language-python">
+class Rectangulo:
+    def __init__(self,base,altura):
+        self.__base = base
+        self.__altura = altura
+
+    def get_base(self):
+        return self.__base
+
+    def get_altura(self):
+        return self.__altura
+
+    def set_base(self,nueva_base):
+        if nueva_base > 0:
+            self.__base = nueva_base
+        else:
+            print("base no valida")
+
+    def set_altura(self,nueva_altura):
+        if nueva_altura > 0:
+            self.__altura = nueva_altura
+        else:
+            print("altura no valida")
+
+    def calcular_area(self):
+            return self.__base*self.__altura
+
+    def calcular_perimetro(self):
+            return 2*self.__base+2*self.__altura
+
+rectangulo = Rectangulo(5,4)
+print("El area del rectangulo",rectangulo.calcular_area())
+print("El perimetro del rectangulo",rectangulo.calcular_perimetro())
+</code></pre>
+</div>
+        <div class="card"><h3>Ejercicio 23</h3><!-- Bloque de código Python en modo solo lectura -->
+<pre><code class="language-python">
+class Calculadora:
+    def __init__(self, numero1, numero2):
+        self.__numero1 = numero1   
+        self.__numero2 = numero2
+
+    def get_numero1(self):
+        return self.__numero1
+
+    def get_numero2(self):
+        return self.__numero2
+
+    def set_numero1(self, nuevo_numero1):
+        self.__numero1 = nuevo_numero1
+
+    def set_numero2(self, nuevo_numero2):
+        self.__numero2 = nuevo_numero2
+
+    def sumar(self):
+        return self.__numero1 + self.__numero2
+
+    def restar(self):
+        return self.__numero1 - self.__numero2
+
+    def multiplicar(self):
+        return self.__numero1 * self.__numero2
+
+    def dividir(self):
+        if self.__numero2 != 0:
+            return self.__numero1 / self.__numero2
+        else:
+            return "Error: División entre 0"
+
+calculadora = Calculadora(2, 5)
+
+print("Número 1:", calculadora.get_numero1())
+print("Número 2:", calculadora.get_numero2())
+
+print("Suma:", calculadora.sumar())
+print("Resta:", calculadora.restar())
+print("Multiplicación:", calculadora.multiplicar())
+print("División:", calculadora.dividir())
+
+calculadora.set_numero1(10)
+calculadora.set_numero2(4)
+
+print("\nNuevos valores:")
+print("Número 1:", calculadora.get_numero1())
+print("Número 2:", calculadora.get_numero2())
+print("Suma:", calculadora.sumar())
+</code></pre>
+</div>
       </div>
     </section>
   </main>
