@@ -1,137 +1,130 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>LP2 — Lenguaje de Programación 2 • UNA Puno</title>
-  <!-- Tailwind via CDN para diseño rápido -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lenguaje de Programación 2 | UNA Puno</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffc0cb; /* Fondo rosado */
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff;
+      padding: 10px 20px;
+      border-bottom: 3px solid #ff69b4;
+    }
+    header img {
+      height: 70px;
+    }
+    header .titles {
+      flex-grow: 1;
+      text-align: center;
+    }
+    h1, h2, h3 {
+      margin: 5px 0;
+      color: #333;
+    }
+    .section {
+      background: #fff;
+      margin: 20px;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      text-align: left;
+    }
+    .section h2 {
+      color: #d63384;
+    }
+    .activity {
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+    .activity textarea {
+      width: 100%;
+      height: 100px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: monospace;
+    }
+    footer {
+      background: #fff;
+      padding: 10px;
+      border-top: 3px solid #ff69b4;
+      margin-top: 20px;
+    }
+  </style>
 </head>
-<body class="min-h-screen bg-pink-200 text-slate-900 p-8">
-  <header class="mb-10">
-    <div class="flex items-center justify-between mb-6 max-w-6xl mx-auto">
-      <!-- Logo Facultad (izquierda) -->
-      <div class="w-20 h-20 bg-white border-2 border-pink-400 rounded-lg flex items-center justify-center overflow-hidden">
-        <!-- Reemplaza src por /assets/facultad.png -->
-        <img id="logo-facultad" src="/assets/facultad.png" alt="Logo Facultad" class="object-contain w-full h-full" onerror="this.style.display='block'; this.parentElement.innerHTML='<span class=&quot;text-xs text-slate-500&quot;>Logo Facultad</span>'">
-      </div>
-
-      <!-- Títulos centrados -->
-      <div class="text-center">
-        <h1 class="text-4xl font-bold mb-2">Universidad Nacional del Altiplano - Puno</h1>
-        <h2 class="text-2xl">Facultad de Ingeniería Estadística e Informática</h2>
-        <h3 class="text-xl mb-2">Curso: Lenguaje de Programación 2</h3>
-        <p class="text-lg font-medium">Estudiante: <strong>Sadith Lina Apaza Huayta</strong></p>
-        <p class="text-md">Docente: <strong>Ing. Leonel Coyla Idme</strong></p>
-      </div>
-
-      <!-- Logo UNA (derecha) -->
-      <div class="w-20 h-20 bg-white border-2 border-pink-400 rounded-lg flex items-center justify-center overflow-hidden">
-        <!-- Reemplaza src por /assets/una.png -->
-        <img id="logo-una" src="/assets/una.png" alt="Logo UNA" class="object-contain w-full h-full" onerror="this.style.display='block'; this.parentElement.innerHTML='<span class=&quot;text-xs text-slate-500&quot;>Logo UNA</span>'">
-      </div>
+<body>
+  <header>
+    <!-- Logo facultad a la izquierda -->
+    <img src="logo_facultad.png" alt="Logo Facultad">
+    
+    <!-- Títulos -->
+    <div class="titles">
+      <h1>Universidad Nacional del Altiplano - Puno</h1>
+      <h2>Facultad de Ingeniería Estadística e Informática</h2>
+      <h3>Curso: Lenguaje de Programación 2</h3>
+      <p><strong>Estudiante:</strong> Sadith Lina Apaza Huayta</p>
+      <p><strong>Docente:</strong> Ing. Leonel Coyla Idme</p>
     </div>
+
+    <!-- Logo UNA a la derecha -->
+    <img src="logo_una.png" alt="Logo UNA">
   </header>
 
-  <main class="space-y-10 max-w-6xl mx-auto">
-    <!-- Sección plantilla: se repite para cada grupo -->
-    <section>
-      <h2 class="text-2xl font-semibold mb-4">Programación Orientada a Objetos</h2>
-      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <!-- Ejercicio 1 -->
-        <div class="bg-white border border-pink-300 shadow-md rounded-2xl p-4">
-          <h3 class="text-lg font-medium mb-2">Ejercicio 1</h3>
-          <textarea placeholder="Pega aquí tu código en Python..." class="w-full h-40 p-2 rounded-lg bg-pink-50 text-slate-800 text-sm font-mono resize-none focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
-        </div>
-        <!-- Ejercicio 2 -->
-        <div class="bg-white border border-pink-300 shadow-md rounded-2xl p-4">
-          <h3 class="text-lg font-medium mb-2">Ejercicio 2</h3>
-          <textarea placeholder="Pega aquí tu código en Python..." class="w-full h-40 p-2 rounded-lg bg-pink-50 text-slate-800 text-sm font-mono resize-none focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
-        </div>
-        <!-- Ejercicio 3 -->
-        <div class="bg-white border border-pink-300 shadow-md rounded-2xl p-4">
-          <h3 class="text-lg font-medium mb-2">Ejercicio 3</h3>
-          <textarea placeholder="Pega aquí tu código en Python..." class="w-full h-40 p-2 rounded-lg bg-pink-50 text-slate-800 text-sm font-mono resize-none focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
-        </div>
-        <!-- Ejercicio 4 -->
-        <div class="bg-white border border-pink-300 shadow-md rounded-2xl p-4">
-          <h3 class="text-lg font-medium mb-2">Ejercicio 4</h3>
-          <textarea placeholder="Pega aquí tu código en Python..." class="w-full h-40 p-2 rounded-lg bg-pink-50 text-slate-800 text-sm font-mono resize-none focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
-        </div>
-      </div>
-    </section>
+  <main>
+    <div class="section">
+      <h2>Programación Orientada a Objetos</h2>
+      <div class="activity">Ejercicio 1 <textarea placeholder="Pega aquí tu código en Python..."></textarea></div>
+      <div class="activity">Ejercicio 2 <textarea placeholder="Pega aquí tu código en Python..."></textarea></div>
+      <div class="activity">Ejercicio 3 <textarea placeholder="Pega aquí tu código en Python..."></textarea></div>
+      <div class="activity">Ejercicio 4 <textarea placeholder="Pega aquí tu código en Python..."></textarea></div>
+    </div>
 
-    <section>
-      <h2 class="text-2xl font-semibold mb-4">Estructura Selectiva</h2>
-      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <!-- 5 a 7 -->
-        <div class="bg-white border border-pink-300 shadow-md rounded-2xl p-4">
-          <h3 class="text-lg font-medium mb-2">Ejercicio 5</h3>
-          <textarea class="w-full h-40 p-2 rounded-lg bg-pink-50 text-slate-800 text-sm font-mono"></textarea>
-        </div>
-        <div class="bg-white border border-pink-300 shadow-md rounded-2xl p-4">
-          <h3 class="text-lg font-medium mb-2">Ejercicio 6</h3>
-          <textarea class="w-full h-40 p-2 rounded-lg bg-pink-50 text-slate-800 text-sm font-mono"></textarea>
-        </div>
-        <div class="bg-white border border-pink-300 shadow-md rounded-2xl p-4">
-          <h3 class="text-lg font-medium mb-2">Ejercicio 7</h3>
-          <textarea class="w-full h-40 p-2 rounded-lg bg-pink-50 text-slate-800 text-sm font-mono"></textarea>
-        </div>
-        <!-- Tarea 1 -->
-        <div class="bg-white border border-pink-300 shadow-md rounded-2xl p-4 md:col-span-2 lg:col-span-3">
-          <h3 class="text-lg font-medium mb-2">Tarea 1: Signos del Zodiaco</h3>
-          <textarea class="w-full h-40 p-2 rounded-lg bg-pink-50 text-slate-800 text-sm font-mono"></textarea>
-        </div>
-      </div>
-    </section>
+    <div class="section">
+      <h2>Estructura Selectiva</h2>
+      <div class="activity">Ejercicio 5 <textarea></textarea></div>
+      <div class="activity">Ejercicio 6 <textarea></textarea></div>
+      <div class="activity">Ejercicio 7 <textarea></textarea></div>
+      <div class="activity">Tarea 1: Signos del Zodiaco <textarea></textarea></div>
+    </div>
 
-    <section>
-      <h2 class="text-2xl font-semibold mb-4">Estructura Repetitiva</h2>
-      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <!-- 8 a 11 -->
-        <div class="bg-white border border-pink-300 shadow-md rounded-2xl p-4"><h3 class="text-lg font-medium mb-2">Ejercicio 8</h3><textarea class="w-full h-40 p-2 rounded-lg bg-pink-50 text-slate-800 text-sm font-mono"></textarea></div>
-        <div class="bg-white border border-pink-300 shadow-md rounded-2xl p-4"><h3 class="text-lg font-medium mb-2">Ejercicio 9</h3><textarea class="w-full h-40 p-2 rounded-lg bg-pink-50 text-slate-800 text-sm font-mono"></textarea></div>
-        <div class="bg-white border border-pink-300 shadow-md rounded-2xl p-4"><h3 class="text-lg font-medium mb-2">Ejercicio 10</h3><textarea class="w-full h-40 p-2 rounded-lg bg-pink-50 text-slate-800 text-sm font-mono"></textarea></div>
-        <div class="bg-white border border-pink-300 shadow-md rounded-2xl p-4"><h3 class="text-lg font-medium mb-2">Ejercicio 11</h3><textarea class="w-full h-40 p-2 rounded-lg bg-pink-50 text-slate-800 text-sm font-mono"></textarea></div>
+    <div class="section">
+      <h2>Estructura Repetitiva</h2>
+      <div class="activity">Ejercicio 8 <textarea></textarea></div>
+      <div class="activity">Ejercicio 9 <textarea></textarea></div>
+      <div class="activity">Ejercicio 10 <textarea></textarea></div>
+      <div class="activity">Ejercicio 11 <textarea></textarea></div>
+      <div class="activity">Tarea 2: Calculadora Estadística <textarea></textarea></div>
+      <div class="activity">Ejercicio 12 <textarea></textarea></div>
+      <div class="activity">Ejercicio 13 <textarea></textarea></div>
+      <div class="activity">Ejercicio 14 <textarea></textarea></div>
+      <div class="activity">Ejercicio 15 <textarea></textarea></div>
+      <div class="activity">Ejercicio 16 <textarea></textarea></div>
+      <div class="activity">Ejercicio 17 <textarea></textarea></div>
+      <div class="activity">Ejercicio 18 <textarea></textarea></div>
+    </div>
 
-        <!-- Tarea 2 -->
-        <div class="bg-white border border-pink-300 shadow-md rounded-2xl p-4 md:col-span-2 lg:col-span-3">
-          <h3 class="text-lg font-medium mb-2">Tarea 2: Calculadora Estadística</h3>
-          <textarea class="w-full h-40 p-2 rounded-lg bg-pink-50 text-slate-800 text-sm font-mono"></textarea>
-        </div>
-
-        <!-- 12 a 18 -->
-        <div class="bg-white border border-pink-300 shadow-md rounded-2xl p-4"><h3 class="text-lg font-medium mb-2">Ejercicio 12</h3><textarea class="w-full h-40 p-2 rounded-lg bg-pink-50 text-slate-800 text-sm font-mono"></textarea></div>
-        <div class="bg-white border border-pink-300 shadow-md rounded-2xl p-4"><h3 class="text-lg font-medium mb-2">Ejercicio 13</h3><textarea class="w-full h-40 p-2 rounded-lg bg-pink-50 text-slate-800 text-sm font-mono"></textarea></div>
-        <div class="bg-white border border-pink-300 shadow-md rounded-2xl p-4"><h3 class="text-lg font-medium mb-2">Ejercicio 14</h3><textarea class="w-full h-40 p-2 rounded-lg bg-pink-50 text-slate-800 text-sm font-mono"></textarea></div>
-        <div class="bg-white border border-pink-300 shadow-md rounded-2xl p-4"><h3 class="text-lg font-medium mb-2">Ejercicio 15</h3><textarea class="w-full h-40 p-2 rounded-lg bg-pink-50 text-slate-800 text-sm font-mono"></textarea></div>
-        <div class="bg-white border border-pink-300 shadow-md rounded-2xl p-4"><h3 class="text-lg font-medium mb-2">Ejercicio 16</h3><textarea class="w-full h-40 p-2 rounded-lg bg-pink-50 text-slate-800 text-sm font-mono"></textarea></div>
-        <div class="bg-white border border-pink-300 shadow-md rounded-2xl p-4"><h3 class="text-lg font-medium mb-2">Ejercicio 17</h3><textarea class="w-full h-40 p-2 rounded-lg bg-pink-50 text-slate-800 text-sm font-mono"></textarea></div>
-        <div class="bg-white border border-pink-300 shadow-md rounded-2xl p-4"><h3 class="text-lg font-medium mb-2">Ejercicio 18</h3><textarea class="w-full h-40 p-2 rounded-lg bg-pink-50 text-slate-800 text-sm font-mono"></textarea></div>
-      </div>
-    </section>
-
-    <section>
-      <h2 class="text-2xl font-semibold mb-4">Encapsulamiento</h2>
-      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <!-- 19 a 23 -->
-        <div class="bg-white border border-pink-300 shadow-md rounded-2xl p-4"><h3 class="text-lg font-medium mb-2">Ejercicio 19</h3><textarea class="w-full h-40 p-2 rounded-lg bg-pink-50 text-slate-800 text-sm font-mono"></textarea></div>
-        <div class="bg-white border border-pink-300 shadow-md rounded-2xl p-4"><h3 class="text-lg font-medium mb-2">Ejercicio 20</h3><textarea class="w-full h-40 p-2 rounded-lg bg-pink-50 text-slate-800 text-sm font-mono"></textarea></div>
-        <div class="bg-white border border-pink-300 shadow-md rounded-2xl p-4"><h3 class="text-lg font-medium mb-2">Ejercicio 21</h3><textarea class="w-full h-40 p-2 rounded-lg bg-pink-50 text-slate-800 text-sm font-mono"></textarea></div>
-        <div class="bg-white border border-pink-300 shadow-md rounded-2xl p-4"><h3 class="text-lg font-medium mb-2">Ejercicio 22</h3><textarea class="w-full h-40 p-2 rounded-lg bg-pink-50 text-slate-800 text-sm font-mono"></textarea></div>
-        <div class="bg-white border border-pink-300 shadow-md rounded-2xl p-4"><h3 class="text-lg font-medium mb-2">Ejercicio 23</h3><textarea class="w-full h-40 p-2 rounded-lg bg-pink-50 text-slate-800 text-sm font-mono"></textarea></div>
-      </div>
-    </section>
+    <div class="section">
+      <h2>Encapsulamiento</h2>
+      <div class="activity">Ejercicio 19 <textarea></textarea></div>
+      <div class="activity">Ejercicio 20 <textarea></textarea></div>
+      <div class="activity">Ejercicio 21 <textarea></textarea></div>
+      <div class="activity">Ejercicio 22 <textarea></textarea></div>
+      <div class="activity">Ejercicio 23 <textarea></textarea></div>
+    </div>
   </main>
 
-  <footer class="mt-12 text-center text-sm text-slate-600">
-    © <span id="year"></span> Facultad de Ingeniería Estadística e Informática — UNA Puno
+  <footer>
+    © <script>document.write(new Date().getFullYear());</script> Facultad de Ingeniería Estadística e Informática — UNA Puno
   </footer>
-
-  <script>
-    // Año dinámico
-    document.getElementById('year').innerText = new Date().getFullYear();
-    // Si no subes logos, los cuadros mostrarán la palabra 'Logo ...' (onerror ya maneja esto).
-  </script>
 </body>
 </html>
