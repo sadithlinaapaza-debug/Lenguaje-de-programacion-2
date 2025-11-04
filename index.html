@@ -4,115 +4,165 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lenguaje de Programación 2 - UNA Puno</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
+    :root{
+      --accent-strong:#ff69b4;
+      --accent-soft:#ffa8d9;
+      --muted:#1e293b;
+      --mono:'Fira Code', monospace;
+      --ui:'Inter', system-ui, Arial, sans-serif;
+    }
+    *{box-sizing:border-box}
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #fbcfe8; /* Fondo rosado */
-      color: #1e293b;
-    }
-    header {
-      text-align: center;
-      padding: 20px;
-      position: relative;
-    }
-    header img {
-      width: 80px;
-      height: 80px;
-      position: absolute;
-      top: 20px;
-    }
-    .logo-left {
-      left: 20px;
-    }
-    .logo-right {
-      right: 20px;
-    }
-    h1 {
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
-    h2 {
-      font-size: 22px;
-      margin-bottom: 8px;
-    }
-    h3 {
-      font-size: 20px;
-      margin-bottom: 6px;
-    }
-    p {
-      margin: 4px 0;
-    }
-    main {
-      max-width: 1000px;
-      margin: 0 auto;
+      font-family: var(--ui);
+      /* fondo rosado solicitado */
+      background: linear-gradient(180deg, #fff0f6, #ffd7ee);
+      color: var(--muted);
+      -webkit-font-smoothing:antialiased;
       padding: 20px;
     }
-    section {
-      margin-bottom: 40px;
+
+    .sheet{
+      max-width:1200px;
+      margin:0 auto;
+      background: linear-gradient(180deg,#ffffff,#fff8fb);
+      border-radius:14px;
+      padding:20px;
+      border:3px solid var(--accent-soft);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      position:relative;
     }
-    section h2 {
-      font-size: 22px;
-      margin-bottom: 15px;
-      color: #9d174d;
+
+    .hero{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 16px;
+      padding:12px;
+      border-radius:10px;
+      margin-bottom:16px;
+      background:linear-gradient(90deg, rgba(255,255,255,0.95), rgba(255,250,253,0.95));
     }
+    .hero img{ width:80px; height:80px; object-fit:contain; }
+    .hero .meta{ flex:1; text-align:center; }
+    /* Mantengo exactamente estas líneas como pediste */
+    .hero h1{ margin:0; font-size:18px; color:var(--accent-strong); font-weight:700; text-transform:uppercase; }
+    .hero h2{ margin:6px 0 0 0; font-size:14px; color:var(--accent-strong); font-weight:700; }
+    .hero h3{ margin:6px 0 0 0; font-size:13px; color:var(--accent-strong); font-weight:600; }
+    .hero p{ margin:6px 0 0 0; font-size:13px; color:var(--muted); }
+
+    .nav { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:14px; justify-content:center; }
+    .nav button{
+      background:linear-gradient(180deg,var(--accent-strong),var(--accent-soft));
+      color:white; border:0; padding:8px 12px; border-radius:8px; font-weight:700; cursor:pointer;
+      box-shadow:0 6px 12px rgba(255,105,180,0.12);
+    }
+
+    .section{ display:none; padding:12px 6px; margin-bottom:14px; }
+    .section.active{ display:block; }
+
+    .section h2{ margin-top:0; color:var(--accent-strong); font-size:18px }
+    .theory{ color:#4b1053; line-height:1.6; margin-bottom:12px; font-size:14px; text-align:justify; }
+
     .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+      gap:14px;
     }
     .card {
-      background: #fff;
-      border: 2px solid #f472b6;
-      border-radius: 15px;
-      padding: 15px;
-      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+      background:#fff;
+      border:2px solid rgba(255,105,180,0.12);
+      border-radius:10px;
+      padding:12px;
+      box-shadow:0 6px 16px rgba(0,0,0,0.03);
     }
-    .card h3 {
-      font-size: 18px;
-      margin-bottom: 8px;
+    .card h3{ margin:0 0 8px 0; font-size:16px; color:#b21b66; }
+    pre{ background:linear-gradient(180deg,#fff6fb,#fff0f8); padding:12px; border-radius:8px; overflow:auto; font-family:var(--mono); font-size:13px; color:#1e293b; white-space:pre; }
+
+    .actions { display:flex; gap:10px; margin-top:8px; flex-wrap:wrap; }
+    .btn {
+      border:0; padding:8px 10px; border-radius:8px; cursor:pointer; font-weight:700; font-size:13px;
     }
-    textarea {
-      width: 100%;
-      height: 150px;
-      resize: none;
-      background: #fdf2f8;
-      border: 1px solid #f9a8d4;
-      border-radius: 10px;
-      padding: 8px;
-      font-family: monospace;
-      font-size: 14px;
-      color: #1e293b;
+    .btn-copy{ background:#ffecf6; color:var(--accent-strong); }
+    .btn-download{ background:#fff0f6; color:#065f46; border:1px solid rgba(0,0,0,0.04); }
+
+    footer { margin-top:18px; text-align:center; color:#475569; font-size:13px; display:flex; align-items:center; justify-content:center; gap:12px; padding-top:8px; }
+    .back-home { background:linear-gradient(180deg,#66a8ff,#007acc); color:white; padding:8px 12px; border-radius:8px; text-decoration:none; font-weight:700; border:0; cursor:pointer; }
+
+    .float-home {
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      z-index:999;
+      background:linear-gradient(180deg,var(--accent-strong),var(--accent-soft));
+      color:white;
+      border:none;
+      padding:12px 14px;
+      border-radius:12px;
+      box-shadow:0 10px 30px rgba(255,105,180,0.18);
+      font-weight:700;
+      cursor:pointer;
     }
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #475569;
-      background: #fce7f3;
-      margin-top: 30px;
+
+    @media(max-width:720px){
+      .grid{ grid-template-columns: 1fr; }
+      .hero img{ width:64px; height:64px; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <!-- Logo Facultad a la izquierda -->
-    <img src="logo-facultad.png" alt="Logo Facultad" class="logo-left" />
-    <!-- Logo UNA a la derecha -->
-    <img src="logo-una.png" alt="Logo UNA" class="logo-right" />
+  <div class="sheet">
+    <div class="hero">
+      <div><img src="logo-facultad.png" alt="Logo Facultad" /></div>
 
-    <h1>Universidad Nacional del Altiplano - Puno</h1>
-    <h2>Facultad de Ingeniería Estadística e Informática</h2>
-    <h3>Curso: Lenguaje de Programación 2</h3>
-    <p><strong>Estudiante:</strong> Sadith Lina Apaza Huayta</p>
-    <p><strong>Docente:</strong> Ing. Leonel Coyla Idme</p>
-  </header>
+      <div class="meta">
+        <h1>Universidad Nacional del Altiplano - Puno</h1>
+        <h2>Facultad de Ingeniería Estadística e Informática</h2>
+        <h3>Curso: Lenguaje de Programación 2</h3>
+        <p><strong>Estudiante:</strong> Sadith Lina Apaza Huayta</p>
+        <p><strong>Docente:</strong> Ing. Leonel Coyla Idme</p>
+      </div>
 
-  <main>
-    <section>
+      <div><img src="logo-una.png" alt="Logo UNA" /></div>
+    </div>
+
+    <div class="nav">
+      <button onclick="show('home')">Inicio</button>
+      <button onclick="show('orientada')">Programación Orientada a Objetos</button>
+      <button onclick="show('selectiva')">Estructura Selectiva</button>
+      <button onclick="show('repetitiva')">Estructura Repetitiva</button>
+      <button onclick="show('encapsulamiento')">Encapsulamiento</button>
+      <button onclick="show('metodos')">Método y Sobrecarga</button>
+      <button onclick="show('operador')">Método Operador</button>
+      <button onclick="show('constructores')">Constructos y Destructor</button>
+      <button onclick="show('relaciones')">Relación entre Clases</button>
+    </div>
+
+    <!-- Inicio: introducción del curso -->
+    <section id="home" class="section active">
+      <h2>Introducción al curso</h2>
+      <p class="theory">
+        Lenguaje de Programación 2 profundiza en conceptos clave de programación estructurada y orientada a objetos: clases, encapsulamiento,
+        constructores y destructores, sobrecarga de métodos y operadores, estructuras de control selectivas y repetitivas, y relaciones entre clases.
+        En este repositorio verás implementaciones prácticas y ejemplos en Python que ilustran cada uno de estos tópicos mediante ejercicios resueltos.
+      </p>
+
+      <p class="theory">
+        Los bloques de código se presentan en su forma original para facilitar su estudio y comparación; están organizados por tema (POO, selectivas, repetitivas, etc.).
+      </p>
+    </section>
+
+    <!-- Programación Orientada a Objetos -->
+    <section id="orientada" class="section">
       <h2>Programación Orientada a Objetos</h2>
       <div class="grid">
-        <div class="card"><h3>Ejercicio 1</h3><!-- Bloque de código Python en modo solo lectura -->
+        <!-- Ejercicio 1 -->
+        <div class="card">
+          <h3>Ejercicio 1</h3>
 <pre><code class="language-python">
 class Coche:
     def __init__(self,marca,modelo,color):
@@ -138,8 +188,15 @@ mi_coche = Coche(marca, modelo, color)
 mi_coche.mostrar_info()
 mi_coche.arrancar()
 </code></pre>
-</div>
-        <div class="card"><h3>Ejercicio 2</h3><!-- Bloque de código Python en modo solo lectura -->
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
+
+        <!-- Ejercicio 2 -->
+        <div class="card">
+          <h3>Ejercicio 2</h3>
 <pre><code class="language-python">
 class Pitagoras:
     def __init__(self,catetoa,catetob):
@@ -157,10 +214,17 @@ operacion = Pitagoras(catetoa,catetob)
 
 print("La hipotenusa es ",operacion.calcular_hipotenusa())   
 </code></pre>
-</div>
-        <div class="card"><h3>Ejercicio 3</h3><!-- Bloque de código Python en modo solo lectura -->
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
+
+        <!-- Ejercicio 3 -->
+        <div class="card">
+          <h3>Ejercicio 3</h3>
 <pre><code class="language-python">
-  class Rectangulo:
+class Rectangulo:
     def __init__(self,base,altura):
         self.base = base
         self.altura = altura
@@ -178,10 +242,17 @@ print("El area es ",operacion_area.area())
 
 print("El perimetro es ",operacion_perimetro.perimetro())
 </code></pre>
-</div>
-        <div class="card"><h3>Ejercicio 4</h3><!-- Bloque de código Python en modo solo lectura -->
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
+
+        <!-- Ejercicio 4 -->
+        <div class="card">
+          <h3>Ejercicio 4</h3>
 <pre><code class="language-python">
-  class CantidadLadrillos:
+class CantidadLadrillos:
     def __init__(self,longuitud,altura,ancho,Jh,Jv):
         self.longuitud = longuitud
         self.altura = altura
@@ -204,16 +275,23 @@ operacion = CantidadLadrillos(longuitud,altura,ancho,Jh,Jv)
 print("La cantidad es ",operacion.Cantidad_de_ladrillos(),"m^2 sin desperdicio")
 print("La cantidad es ",operacion.Cantidad_de_ladrillos()*1.05,"m^2 con desperdicio")
 print("el area",operacion.Cantidad_de_ladrillos()*8.05*ancho,"m^2")
-  
 </code></pre>
-</div>
-    </div>
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
+
+      </div>
     </section>
 
-    <section>
+    <!-- Estructura Selectiva -->
+    <section id="selectiva" class="section">
       <h2>Estructura Selectiva</h2>
       <div class="grid">
-        <div class="card"><h3>Ejercicio 5</h3><!-- Bloque de código Python en modo solo lectura -->
+        <!-- Ejercicio 5 -->
+        <div class="card">
+          <h3>Ejercicio 5</h3>
 <pre><code class="language-python">
 class Numero:
     def __init__(self,valor):
@@ -231,10 +309,16 @@ ejemplos = [Numero(0),Numero(2),Numero(5)]
 for num in ejemplos:
     tipo = num.clasificar()
     print(f"El numero {num.valor} es {tipo}")
-  
 </code></pre>
-</div>
-        <div class="card"><h3>Ejercicio 6</h3><!-- Bloque de código Python en modo solo lectura -->
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
+
+        <!-- Ejercicio 6 -->
+        <div class="card">
+          <h3>Ejercicio 6</h3>
 <pre><code class="language-python">
 class Persona:
     def __init__(self,nombre,edad):
@@ -255,8 +339,15 @@ if persona.es_mayor_de_edad():
 else:
     print(f"La persona {persona.nombre} es menor de edad")  
 </code></pre>
-</div>
-        <div class="card"><h3>Ejercicio 7</h3><!-- Bloque de código Python en modo solo lectura -->
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
+
+        <!-- Ejercicio 7 -->
+        <div class="card">
+          <h3>Ejercicio 7</h3>
 <pre><code class="language-python">
 class Empleado:
     def __init__(self,Nombre,Cargo,Salario):
@@ -285,8 +376,15 @@ nuevo = self.Salario *(1 + porcentaje)
     
 print(f"{emp.Nombre} {emp.Cargo}: salario nuevo = {nuevo:2f}")  
 </code></pre>
-</div>
-        <div class="card"><h3>Tarea 1: Signos del Zodiaco</h3><!-- Bloque de código Python en modo solo lectura -->
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
+
+        <!-- Tarea 1 -->
+        <div class="card">
+          <h3>Tarea 1: Signos del Zodiaco</h3>
 <pre><code class="language-python">
 class Persona:
     def __init__(self, nombre, dia, mes):
@@ -329,14 +427,22 @@ mes = input("Ingresa tu mes de nacimiento: ")
 persona = Persona(nombre,dia,mes)
 print(f"{persona.nombre} nacio el {persona.dia} de {persona.mes} y tu signo es {persona.signo()}")  
 </code></pre>
-</div>
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <section>
+    <!-- Estructura Repetitiva -->
+    <section id="repetitiva" class="section">
       <h2>Estructura Repetitiva</h2>
       <div class="grid">
-        <div class="card"><h3>Ejercicio 8</h3><!-- Bloque de código Python en modo solo lectura -->
+        <!-- Ejercicio 8 -->
+        <div class="card">
+          <h3>Ejercicio 8</h3>
 <pre><code class="language-python">
 class Factorial:
     def __init__(self,numero):
@@ -359,8 +465,15 @@ def main():
 if __name__=="__main__":
     main()   
 </code></pre>
-</div>
-        <div class="card"><h3>Ejercicio 9</h3><!-- Bloque de código Python en modo solo lectura -->
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
+
+        <!-- Ejercicio 9 -->
+        <div class="card">
+          <h3>Ejercicio 9</h3>
 <pre><code class="language-python">
 class Fibonaci:
     def __init__(self,cantidad):
@@ -381,8 +494,15 @@ def main():
 if __name__=="__main__":
     main()   
 </code></pre>
-</div>
-        <div class="card"><h3>Ejercicio 10</h3><!-- Bloque de código Python en modo solo lectura -->
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
+
+        <!-- Ejercicio 10 -->
+        <div class="card">
+          <h3>Ejercicio 10</h3>
 <pre><code class="language-python">
 class TabladeMultiplicar:
     def __init__(self,numero):
@@ -400,10 +520,16 @@ def main():
 
 if __name__=="__main__":
     main()
-   
 </code></pre>
-</div>
-        <div class="card"><h3>Ejercicio 11</h3><!-- Bloque de código Python en modo solo lectura -->
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
+
+        <!-- Ejercicio 11 -->
+        <div class="card">
+          <h3>Ejercicio 11</h3>
 <pre><code class="language-python">
 class SumaNaturales:
     def __init__(self, limite, ):
@@ -423,57 +549,16 @@ def main():
 
 if __name__=="__main__":
     main()
-
 </code></pre>
-</div>
-        <div class="card"><h3>Tarea 2: Calculadora Estadística</h3><!-- Bloque de código Python en modo solo lectura -->
-<pre><code class="language-python">
-class CalculadoraEstadistica:
-    def __init__(self, lista, numero):
-        self.lista = lista
-        self.numero = numero
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
 
-    def ingresar_datos(self):
-        datos = input("Ingrese los datos: ")
-        self.lista = []
-        for i in datos.split():
-            self.numero = float(i)
-            self.lista.append(self.numero)
-
-    def media(self):
-        total = 0
-        contador = 0
-        for i in self.lista:
-            total = total + i
-            contador = contador + 1
-        if contador == 0:
-            return 0
-        return total / contador
-
-    def varianza(self):
-        m = self.media()
-        suma = 0
-        contador = 0
-        for i in self.lista:
-            suma = suma + (i - m) ** 2
-            contador = contador + 1
-        if contador == 0:
-            return 0
-        return suma / contador
-
-    def desviacion_estandar(self):
-        return self.varianza() ** 0.5
-
-CalculadoraDatos = CalculadoraEstadistica([], 0)
-
-CalculadoraDatos.ingresar_datos()
-
-print("Media:", CalculadoraDatos.media())
-print("Varianza:", CalculadoraDatos.varianza())
-print("Desviación estándar:", CalculadoraDatos.desviacion_estandar())
-</code></pre>
-</div>
-        <div class="card"><h3>Ejercicio 12</h3><!-- Bloque de código Python en modo solo lectura -->
+        <!-- Ejercicio 12 -->
+        <div class="card">
+          <h3>Ejercicio 12</h3>
 <pre><code class="language-python">
 class NumeroNatural:
     def __init__(self, valor):
@@ -492,10 +577,17 @@ def main():
 if __name__ == "__main__":
     main()
 </code></pre>
-</div>
-        <div class="card"><h3>Ejercicio 13</h3><!-- Bloque de código Python en modo solo lectura -->
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
+
+        <!-- Ejercicio 13 -->
+        <div class="card">
+          <h3>Ejercicio 13</h3>
 <pre><code class="language-python">
-  class NumeroMultiplo:
+class NumeroMultiplo:
     def __init__(self, valor):
         self.valor = valor
 
@@ -524,10 +616,16 @@ def main():
 
 if __name__ == "__main__":  
     main()
-
 </code></pre>
-</div>
-        <div class="card"><h3>Ejercicio 14</h3><!-- Bloque de código Python en modo solo lectura -->
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
+
+        <!-- Ejercicio 14 -->
+        <div class="card">
+          <h3>Ejercicio 14</h3>
 <pre><code class="language-python">
 class Fibonacci:
     def __init__(self,cantidad):
@@ -550,10 +648,17 @@ def main():
 if __name__=="__main__":
     main()
 </code></pre>
-</div>
-        <div class="card"><h3>Ejercicio 15</h3><!-- Bloque de código Python en modo solo lectura -->
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
+
+        <!-- Ejercicio 15 -->
+        <div class="card">
+          <h3>Ejercicio 15</h3>
 <pre><code class="language-python">
-  class Numero:
+class Numero:
     def __init__(self,cantidad):
         self.cantidad = cantidad
         self.contador = 0
@@ -569,8 +674,15 @@ def main():
 if __name__=="__main__":
     main()
 </code></pre>
-</div>
-        <div class="card"><h3>Ejercicio 16</h3><!-- Bloque de código Python en modo solo lectura -->
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
+
+        <!-- Ejercicio 16 -->
+        <div class="card">
+          <h3>Ejercicio 16</h3>
 <pre><code class="language-python">
 class CalculadoraSuma:
     def __init__(self):
@@ -593,10 +705,17 @@ def main():
     calculadora = CalculadoraSuma()
     calculadora.sumarNumero()
 if __name__=="__main__":
-    main()  
+    main()
 </code></pre>
-</div>
-        <div class="card"><h3>Ejercicio 17</h3><!-- Bloque de código Python en modo solo lectura -->
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
+
+        <!-- Ejercicio 17 -->
+        <div class="card">
+          <h3>Ejercicio 17</h3>
 <pre><code class="language-python">
 class CalculadoraSuma:
     def __init__(self):
@@ -622,8 +741,15 @@ def main():
     calculadora.sumarNumero()
 if __name__=="  
 </code></pre>
-</div>
-        <div class="card"><h3>Ejercicio 18</h3><!-- Bloque de código Python en modo solo lectura -->
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
+
+        <!-- Ejercicio 18 -->
+        <div class="card">
+          <h3>Ejercicio 18</h3>
 <pre><code class="language-python">
 class GestorTareas:
     def __init__(self):
@@ -660,16 +786,24 @@ while True:
         print("Saliendo del gestor de tareas")
         break
     else:
-        print("Opcion no valida. Intente de nuevo")  
+        print("Opcion no valida. Intente de nuevo")
 </code></pre>
-</div>
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <section>
+    <!-- Encapsulamiento -->
+    <section id="encapsulamiento" class="section">
       <h2>Encapsulamiento</h2>
       <div class="grid">
-        <div class="card"><h3>Ejercicio 19</h3><!-- Bloque de código Python en modo solo lectura -->
+        <!-- Ejercicio 19 -->
+        <div class="card">
+          <h3>Ejercicio 19</h3>
 <pre><code class="language-python">
 class leerNumero:
     def __init__(self,numero):
@@ -692,8 +826,15 @@ def main():
 if __name__=="__main__":
     main()
 </code></pre>
-</div>
-        <div class="card"><h3>Ejercicio 20</h3><!-- Bloque de código Python en modo solo lectura -->
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
+
+        <!-- Ejercicio 20 -->
+        <div class="card">
+          <h3>Ejercicio 20</h3>
 <pre><code class="language-python">
 class Persona:
     def __init__(self,nombre,edad):
@@ -727,8 +868,15 @@ print(persona.get_edad())
 print(persona.get_nombre())
 print(persona.get_nombre(),persona.get_edad())
 </code></pre>
-</div>
-        <div class="card"><h3>Ejercicio 21</h3><!-- Bloque de código Python en modo solo lectura -->
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
+
+        <!-- Ejercicio 21 -->
+        <div class="card">
+          <h3>Ejercicio 21</h3>
 <pre><code class="language-python">
 import math  
 class Circulo:
@@ -754,8 +902,15 @@ circulo = Circulo(3)
 print("Area del circulo",round(circulo.calcular_area(),2))
 print("Area del perimetro",round(circulo.calcular_perimetro(),2))
 </code></pre>
-</div>
-        <div class="card"><h3>Ejercicio 22</h3><!-- Bloque de código Python en modo solo lectura -->
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
+
+        <!-- Ejercicio 22 -->
+        <div class="card">
+          <h3>Ejercicio 22</h3>
 <pre><code class="language-python">
 class Rectangulo:
     def __init__(self,base,altura):
@@ -790,8 +945,15 @@ rectangulo = Rectangulo(5,4)
 print("El area del rectangulo",rectangulo.calcular_area())
 print("El perimetro del rectangulo",rectangulo.calcular_perimetro())
 </code></pre>
-</div>
-        <div class="card"><h3>Ejercicio 23</h3><!-- Bloque de código Python en modo solo lectura -->
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
+
+        <!-- Ejercicio 23 -->
+        <div class="card">
+          <h3>Ejercicio 23</h3>
 <pre><code class="language-python">
 class Calculadora:
     def __init__(self, numero1, numero2):
@@ -843,17 +1005,22 @@ print("Número 1:", calculadora.get_numero1())
 print("Número 2:", calculadora.get_numero2())
 print("Suma:", calculadora.sumar())
 </code></pre>
-</div>
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
 
- </div>
+      </div>
     </section>
-          
-  <setion>
-    
+
+    <!-- Metodo y Sobrecarga -->
+    <section id="metodos" class="section">
       <h2>Metodo y Sobrecarga</h2>
       <div class="grid">
-        <div class="card"><h3>Ejercicio 24: PARAMETRO </h3>
-<!-- Bloque de código Python en modo solo lectura -->
+        <!-- Ejercicio 24 -->
+        <div class="card">
+          <h3>Ejercicio 24: PARAMETRO</h3>
 <pre><code class="language-python">
 class Persona:
     def __init__(self,nombre):
@@ -870,10 +1037,16 @@ persona1.saludar()
 
 persona2 = Persona("maria")
 persona2.respomde()
+</code></pre>
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
 
-  </code></pre>
-</div>
-        <div class="card"><h3>Ejercicio 25</h3><!-- Bloque de código Python en modo solo lectura -->
+        <!-- Ejercicio 25 -->
+        <div class="card">
+          <h3>Ejercicio 25</h3>
 <pre><code class="language-python">
 class Calculadora:
     def sumar(self,a,b):
@@ -886,8 +1059,15 @@ suma = calcular.sumar(1,3)
 
 print(f"La suma de los parametros {calcular.a} y {calcular.b} es {suma}")
 </code></pre>
-</div>
-        <div class="card"><h3>Ejercicio 26</h3><!-- Bloque de código Python en modo solo lectura -->
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
+
+        <!-- Ejercicio 26 -->
+        <div class="card">
+          <h3>Ejercicio 26</h3>
 <pre><code class="language-python">
 class Rectangulo:
     def __init__(self,base,altura):
@@ -901,12 +1081,18 @@ rectangulo = Rectangulo(10,5)
 area = rectangulo.calcular_area()
 
 print("El area de un rectangulo es:",area)
-
 </code></pre>
-</div>
-        <div class="card"><h3>Ejercicio 27</h3><!-- Bloque de código Python en modo solo lectura -->
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
+
+        <!-- Ejercicio 27 -->
+        <div class="card">
+          <h3>Ejercicio 27</h3>
 <pre><code class="language-python">
-    class Operaciones:
+class Operaciones:
     def Sumar(self,a,b,c = None):
         if c is not None:
             return a+b+c
@@ -915,12 +1101,18 @@ print("El area de un rectangulo es:",area)
 operacion1 = Operaciones()
 operacion2 = Operaciones()
 
-print("Suma con dos numeros",operacion1.sumar(5,7))
-print("Suma con tres numeros",operacion2.sumar(1,2,3))       
-
+print("Suma con dos numeros",operacion1.Sumar(5,7))
+print("Suma con tres numeros",operacion2.Sumar(1,2,3))       
 </code></pre>
-</div>
-        <div class="card"><h3>Ejercicio 28</h3><!-- Bloque de código Python en modo solo lectura -->
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
+
+        <!-- Ejercicio 28 -->
+        <div class="card">
+          <h3>Ejercicio 28</h3>
 <pre><code class="language-python">
 import math
 class Circulo:
@@ -932,7 +1124,7 @@ class Circulo:
         return area
 
     def calcular_perimetro(self):
-        perimetro = 2 * maht.pi * self.radio
+        perimetro = 2 * math.pi * self.radio
         return perimetro
 
     def mostrar_informacion(self):
@@ -942,10 +1134,16 @@ class Circulo:
 
 circulo = Circulo(7)
 circulo.mostrar_informacion()
-        
 </code></pre>
-</div>
-        <div class="card"><h3>Ejercicio 29</h3><!-- Bloque de código Python en modo solo lectura -->
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
+
+        <!-- Ejercicio 29 -->
+        <div class="card">
+          <h3>Ejercicio 29</h3>
 <pre><code class="language-python">
 class Triangulo:
     def __init__(self,catetoa,catetob):
@@ -953,27 +1151,32 @@ class Triangulo:
         self.catetob = catetob
 
     def CalcularHipotenusa(self):
-        Hipotenusa = (catetoa**2 + catetob**2)*1/2
+        Hipotenusa = (self.catetoa**2 + self.catetob**2)*1/2
         return Hipotenusa
 
 hipotenusa = Triangulo(3,4)
 hipotenusa.CalcularHipotenusa()
 
 print("La hipotenusa es ",hipotenusa.CalcularHipotenusa())
-        
 </code></pre>
-</div>
-
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
         </div>
+
+      </div>
     </section>
-        
-<section>
+
+    <!-- Metodo Operador -->
+    <section id="operador" class="section">
       <h2>Metodo Operador</h2>
       <div class="grid">
-        <div class="card"><h3>Ejercicio 30: PARAMETRO </h3>
-<!-- Bloque de código Python en modo solo lectura -->
-<pre><code class="language-python">
 
+        <!-- Ejercicio 30 -->
+        <div class="card">
+          <h3>Ejercicio 30</h3>
+<pre><code class="language-python">
 class Persona:
     def __init__(self,nombre,edad):
         self.nombre = nombre
@@ -1006,10 +1209,16 @@ print(persona1>persona2)
 
 print("Suma de edades",persona1 + persona2)
 print("Suma de edades",persona1 + persona3)
-  </code></pre>
-</div>
-        
-   <div class="card"><h3>Ejercicio 31</h3><!-- Bloque de código Python en modo solo lectura -->
+</code></pre>
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
+
+        <!-- Ejercicio 31 -->
+        <div class="card">
+          <h3>Ejercicio 31</h3>
 <pre><code class="language-python">
 class Producto:
     def __init__(self,nombre,precio,stock):
@@ -1039,11 +1248,16 @@ print(prod1 == prod3)
 
 print("Suma de precio de producto",prod1 + prod2)
 print("Suma de precio de producto",prod1 + prod3)
-      
 </code></pre>
-</div>
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
 
-<div class="card"><h3>Ejercicio 32</h3><!-- Bloque de código Python en modo solo lectura -->
+        <!-- Ejercicio 32 -->
+        <div class="card">
+          <h3>Ejercicio 32</h3>
 <pre><code class="language-python">
 class CuentaBancaria:
     def __init__(self,titular,saldo):
@@ -1072,19 +1286,24 @@ cuenta2.mostrar()
 
 cuenta3 = cuenta2 - 700
 cuenta3.mostrar()
-        
 </code></pre>
-</div>
-
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
         </div>
+
+      </div>
     </section>
-        
-  <section>
-<h2>Constructos y Destructor</h2>
+
+    <!-- Constructos y Destructor -->
+    <section id="constructores" class="section">
+      <h2>Constructos y Destructor</h2>
       <div class="grid">
-        <div class="card"><h3>Constructor</h3>
-        <div class="card"><h3>Ejercicio 33 </h3>
-<!-- Bloque de código Python en modo solo lectura -->
+
+        <!-- Ejercicio 33 -->
+        <div class="card">
+          <h3>Ejercicio 33</h3>
 <pre><code class="language-python">
 import math
 class TrianguloRectangulo:
@@ -1111,11 +1330,16 @@ def main():
 
 if __name__=="__main__":
     main()
+</code></pre>
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
 
-  </code></pre>
-</div>
-          
-   <div class="card"><h3>Ejercicio 34</h3><!-- Bloque de código Python en modo solo lectura -->
+        <!-- Ejercicio 34 -->
+        <div class="card">
+          <h3>Ejercicio 34</h3>
 <pre><code class="language-python">
 import math
 class Circulo:
@@ -1140,12 +1364,16 @@ try:
     print(circulo)
 except NameError:
     print("El objeto ya no existe")
-  
 </code></pre>
-</div>
-          
-<div class="card"><h3>Destructores</h3
-<div class="card"><h3>Ejercicio 35</h3><!-- Bloque de código Python en modo solo lectura -->
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
+
+        <!-- Ejercicio 35 -->
+        <div class="card">
+          <h3>Ejercicio 35</h3>
 <pre><code class="language-python">
 import math
 class Comida:
@@ -1176,11 +1404,16 @@ try:
     print(almuerzo)
 except NameError:
     print("Almuerzo destruido")
-        
 </code></pre>
-</div>
-  
-  <div class="card"><h3>Ejercicio 36</h3><!-- Bloque de código Python en modo solo lectura -->
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
+
+        <!-- Ejercicio 36 -->
+        <div class="card">
+          <h3>Ejercicio 36</h3>
 <pre><code class="language-python">
 import gc
 class Estudiante:
@@ -1211,13 +1444,18 @@ grupo.clear()
 del estudiante
 gc.collect()
 print("Fin del programa")
-        
 </code></pre>
-</div>
-  
-  <div class="card"><h3>Ejercicio 37</h3><!-- Bloque de código Python en modo solo lectura -->
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
+
+        <!-- Ejercicio 37 -->
+        <div class="card">
+          <h3>Ejercicio 37</h3>
 <pre><code class="language-python">
-  import gc
+import gc
 class Libro:
     def __init__(self,titulo,autor,anio):
         self.titulo = titulo
@@ -1245,14 +1483,18 @@ for datos in libros_datos:
 biblioteca.clear()
 del libro
 gc.collect()
-print("Fin del programa")  
-        
+print("Fin del programa")
 </code></pre>
-</div>
-  
-    <div class="card"><h3>Ejercicio 38</h3><!-- Bloque de código Python en modo solo lectura -->
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
+
+        <!-- Ejercicio 38 -->
+        <div class="card">
+          <h3>Ejercicio 38</h3>
 <pre><code class="language-python">
-  
 import gc
 class Producto:
     def __init__(self,nombre,precio,cantidad):
@@ -1282,13 +1524,17 @@ inventario.clear()
 del producto
 gc.collect()
 print("Fin del programa")
-        
 </code></pre>
-</div>
-  
-  <div class="card"><h3>Ejercicio 39</h3><!-- Bloque de código Python en modo solo lectura -->
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
+
+        <!-- Ejercicio 39 -->
+        <div class="card">
+          <h3>Ejercicio 39</h3>
 <pre><code class="language-python">
-  
 import gc
 class Curso:
     def __init__(self,nombre,codigo,profesor):
@@ -1319,20 +1565,25 @@ organizacion.clear()
 del curso
 gc.collect()
 print("Fin del programa")
-        
 </code></pre>
-</div>
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
 
- </div>
-      <section>
-          
-  <section>
-  <h2>Relacion entre Clases</h2>
+      </div>
+    </section>
+
+    <!-- Relaciones entre Clases -->
+    <section id="relaciones" class="section">
+      <h2>Relacion entre Clases</h2>
       <div class="grid">
-        <div class="card"><h3>Ejercicio 40 </h3>
-<!-- Bloque de código Python en modo solo lectura -->
-<pre><code class="language-python">
 
+        <!-- Ejercicio 40 -->
+        <div class="card">
+          <h3>Ejercicio 40</h3>
+<pre><code class="language-python">
 class Profesor:
     def __init__(self,nombre):
         self.nombre = nombre
@@ -1345,9 +1596,16 @@ class Curso:
 prof = Profesor("Dr.Morillos")
 curso = Curso("Muestreo",prof)
 print(curso.profesor.nombre)
-  </code></pre>
-</div>
-        <div class="card"><h3>Ejercicio 41</h3><!-- Bloque de código Python en modo solo lectura -->
+</code></pre>
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
+
+        <!-- Ejercicio 41 -->
+        <div class="card">
+          <h3>Ejercicio 41</h3>
 <pre><code class="language-python">
 class Departamento:
     def __init__(self,nombre):
@@ -1369,11 +1627,16 @@ uni.agregar_departamento(dep1)
 uni.agregar_departamento(dep2)
 
 uni.agregar_departamento()
-        
 </code></pre>
-</div>
-        
-       <div class="card"><h3>Ejercicio 42</h3><!-- Bloque de código Python en modo solo lectura -->
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
+
+        <!-- Ejercicio 42 -->
+        <div class="card">
+          <h3>Ejercicio 42</h3>
 <pre><code class="language-python">
 class Motor:
     def __init__(self,tipo):
@@ -1395,13 +1658,18 @@ miAuto = Auto("Tesla")
 miAuto.arrancar()
 tuAuto = Auto("Toyota")
 tuAuto.arrancar()
-        
 </code></pre>
-</div>
-        
-      <div class="card"><h3>Ejercicio 43</h3><!-- Bloque de código Python en modo solo lectura -->
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
+
+        <!-- Ejercicio 43 -->
+        <div class="card">
+          <h3>Ejercicio 43</h3>
 <pre><code class="language-python">
- class Estudiante:
+class Estudiante:
     def __init__(self, nombre, dni, codigo_estudiante):
         self.nombre = nombre
         self.dni = dni
@@ -1509,13 +1777,98 @@ univ.mostrar_cursos()
 est1.mostrar_informacion()
 est2.mostrar_informacion() 
 </code></pre>
-</div>
+          <div class="actions">
+            <button class="btn btn-copy" data-action="copy">Copiar</button>
+            <button class="btn btn-download" data-action="download">Descargar .py</button>
+          </div>
+        </div>
+
       </div>
     </section>
-  </main>
 
-  <footer>
-    © 2025 Facultad de Ingeniería Estadística e Informática — UNA Puno
-  </footer>
+    <footer>
+      <button class="back-home" onclick="show('home')">⬅ Volver al inicio</button>
+      <div>© 2025 Facultad de Ingeniería Estadística e Informática — UNA Puno</div>
+    </footer>
+  </div>
+
+  <button class="float-home" onclick="show('home')">Inicio</button>
+
+  <script>
+    function show(id){
+      document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+      const el = document.getElementById(id);
+      if(el) el.classList.add('active');
+      window.scrollTo({top:0,behavior:'smooth'});
+    }
+
+    show('home');
+
+    function sanitizeFilename(title){
+      return title.toLowerCase().replace(/\s+/g,'_').replace(/[^a-z0-9_\-\.]/g,'').substring(0,60) || 'codigo';
+    }
+
+    document.addEventListener('click', function(e){
+      const btn = e.target.closest('button[data-action]');
+      if(!btn) return;
+      const action = btn.getAttribute('data-action');
+      const card = btn.closest('.card');
+      if(!card) return;
+      const codeEl = card.querySelector('pre code');
+      const titleEl = card.querySelector('h3');
+      const titleText = titleEl ? titleEl.textContent.trim() : 'codigo';
+      const text = codeEl ? codeEl.textContent : '';
+
+      if(action === 'copy'){
+        if(!text){ alert('No hay código para copiar.'); return; }
+        if(navigator.clipboard && navigator.clipboard.writeText){
+          navigator.clipboard.writeText(text).then(()=> {
+            const old = btn.textContent;
+            btn.textContent = 'Copiado ✓';
+            setTimeout(()=> btn.textContent = old, 1200);
+          }).catch(()=> fallbackCopy(text, btn));
+        } else {
+          fallbackCopy(text, btn);
+        }
+      } else if(action === 'download'){
+        if(!text){ alert('No hay código para descargar.'); return; }
+        const filename = sanitizeFilename(titleText) + '.py';
+        triggerDownload(filename, text);
+        const old = btn.textContent;
+        btn.textContent = 'Descargado ✓';
+        setTimeout(()=> btn.textContent = old, 1200);
+      }
+    });
+
+    function fallbackCopy(text, btn){
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.left = '-9999px';
+      document.body.appendChild(ta);
+      ta.select();
+      try{
+        document.execCommand('copy');
+        const old = btn.textContent;
+        btn.textContent = 'Copiado ✓';
+        setTimeout(()=> btn.textContent = old, 1200);
+      }catch(e){
+        alert('No se pudo copiar automáticamente. Seleccione y copie manualmente.');
+      }
+      ta.remove();
+    }
+
+    function triggerDownload(filename, content){
+      const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    }
+  </script>
 </body>
 </html>
