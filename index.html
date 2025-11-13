@@ -4,9 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lenguaje de Programación 2 - UNA Puno</title>
-
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
-
   <style>
     :root{
       --accent-strong:#ff69b4;
@@ -16,14 +14,7 @@
       --ui:'Inter', system-ui, Arial, sans-serif;
     }
     *{box-sizing:border-box}
-    body {
-      margin: 0;
-      font-family: var(--ui);
-      background: linear-gradient(180deg, #fff0f6, #ffd7ee);
-      color: var(--muted);
-      -webkit-font-smoothing:antialiased;
-      padding: 20px;
-    }
+    body { margin: 0; font-family: var(--ui); background: linear-gradient(180deg, #fff0f6, #ffd7ee); color: var(--muted); -webkit-font-smoothing:antialiased; padding: 20px; }
     .sheet{ max-width:1200px; margin:0 auto; background: linear-gradient(180deg,#ffffff,#fff8fb); border-radius:14px; padding:20px; border:3px solid var(--accent-soft); box-shadow: 0 10px 30px rgba(0,0,0,0.06); position:relative; }
     .hero{ display:flex; align-items:center; justify-content:space-between; gap: 16px; padding:12px; border-radius:10px; margin-bottom:16px; background:linear-gradient(90deg, rgba(255,255,255,0.95), rgba(255,250,253,0.95)); }
     .hero img{ width:80px; height:80px; object-fit:contain; }
@@ -82,9 +73,9 @@
       <button onclick="show('encapsulamiento')">Encapsulamiento</button>
       <button onclick="show('metodos')">Método y Sobrecarga</button>
       <button onclick="show('operador')">Método Operador</button>
-      <button onclick="show('constructores')">Constructos y Destructor</button>
+      <button onclick="show('constructores')">Constructores y Destructor</button>
       <button onclick="show('relaciones')">Relación entre Clases</button>
-      <button onclick="show('herencia')">Herencia en P.O.O</button>
+      <button onclick="show('herencia_poo')">Herencia en P.O.O</button>
     </div>
 
     <section id="home" class="section active">
@@ -96,34 +87,33 @@
     <section id="orientada" class="section">
       <h2>Programación Orientada a Objetos</h2>
       <div class="grid">
-        <!-- Ejercicio 1 -> Ejemplo 01.py (commit 68bcf4b...) -->
+        <!-- Ejercicio 1 -->
         <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/68bcf4b7a6949d768d45d01b6a90a629cfef18bc/Ejemplo%2001.py">
           <h3>Ejercicio 1</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Ejercicio 2 -> EJEMPLO 02.py -->
+        <!-- Ejercicio 2 -->
         <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/68bcf4b7a6949d768d45d01b6a90a629cfef18bc/EJEMPLO%2002.py">
           <h3>Ejercicio 2</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Ejercicio 3 -> ejemplo 03.py -->
+        <!-- Ejercicio 3 -->
         <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/68bcf4b7a6949d768d45d01b6a90a629cfef18bc/ejemplo%2003.py">
           <h3>Ejercicio 3</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Ejercicio 4 -> ejemplo 04.py -->
+        <!-- Ejercicio 4 -->
         <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/68bcf4b7a6949d768d45d01b6a90a629cfef18bc/ejemplo%2004.py">
           <h3>Ejercicio 4</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
-
       </div>
     </section>
 
@@ -131,39 +121,33 @@
     <section id="selectiva" class="section">
       <h2>Estructura Selectiva</h2>
       <div class="grid">
-        <!-- Ejercicio 5 -> ejemplo 05.py -->
+        <!-- Ejercicio 5 -->
         <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/68bcf4b7a6949d768d45d01b6a90a629cfef18bc/ejemplo%2005.py">
           <h3>Ejercicio 5</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Ejercicio 6 -> ejemplo 06.py -->
+        <!-- Ejercicio 6 -->
         <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/68bcf4b7a6949d768d45d01b6a90a629cfef18bc/ejemplo%2006.py">
           <h3>Ejercicio 6</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Ejercicio 7 -> ejemplo 07.py -->
+        <!-- Ejercicio 7 -->
         <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/68bcf4b7a6949d768d45d01b6a90a629cfef18bc/ejemplo%2007.py">
           <h3>Ejercicio 7</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Tarea 1: Signos del Zodiaco -->
-<div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/ab867fb5a5045845654a14e744948d43fd0e2327/signos%20Zodiacales.py">
-  <h3>Tarea 1: Signos del Zodiaco</h3>
-  <pre><code class="language-python"></code></pre>
-  <div class="actions">
-    <button class="btn btn-copy" data-action="copy">Copiar</button>
-    <button class="btn btn-download" data-action="download">Descargar .py</button>
-  </div>
-</div>
-
+        <!-- Tarea 1: Signos del Zodiaco (colocada aquí) -->
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/ab867fb5a5045845654a14e744948d43fd0e2327/signos%20Zodiacales.py">
+          <h3>Tarea 1: Signos del Zodiaco</h3>
+          <pre><code class="language-python"></code></pre>
+          <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
-
       </div>
     </section>
 
@@ -171,84 +155,89 @@
     <section id="repetitiva" class="section">
       <h2>Estructura Repetitiva</h2>
       <div class="grid">
-        <!-- Ejercicio 8 -> ejemplo 09.py (user provided ejemplo 09.py maps to ejercicio9) -->
-        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/68bcf4b7a6949d768d45d01b6a90a629cfef18bc/ejemplo%2009.py">
+        <!-- Ejercicio 8 -->
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/68bcf4b7a6949d768d45d01b6a90a629cfef18bc/ejemplo%2008.py">
           <h3>Ejercicio 8</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Ejercicio 9 -> ejemplo 10.py -->
-        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/68bcf4b7a6949d768d45d01b6a90a629cfef18bc/ejemplo%2010.py">
+        <!-- Ejercicio 9 -->
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/68bcf4b7a6949d768d45d01b6a90a629cfef18bc/ejemplo%2009.py">
           <h3>Ejercicio 9</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Ejercicio 10 -> ejemplo 11.py -->
-        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/68bcf4b7a6949d768d45d01b6a90a629cfef18bc/ejemplo%2011.py">
+        <!-- Ejercicio 10 -->
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/68bcf4b7a6949d768d45d01b6a90a629cfef18bc/ejemplo%2010.py">
           <h3>Ejercicio 10</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Ejercicio 11 -> ejemplo 12.py -->
-        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/68bcf4b7a6949d768d45d01b6a90a629cfef18bc/ejemplo%2012.py">
+        <!-- Ejercicio 11 -->
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/68bcf4b7a6949d768d45d01b6a90a629cfef18bc/ejemplo%2011.py">
           <h3>Ejercicio 11</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Ejercicio 12 -> ejemplo 13.py -->
-        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/68bcf4b7a6949d768d45d01b6a90a629cfef18bc/ejemplo%2013.py">
+        <!-- Ejercicio 12 -->
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/68bcf4b7a6949d768d45d01b6a90a629cfef18bc/ejemplo%2012.py">
           <h3>Ejercicio 12</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Ejercicio 13 -> ejemplo 14.py -->
-        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/68bcf4b7a6949d768d45d01b6a90a629cfef18bc/ejemplo%2014.py">
+        <!-- Ejercicio 13 -->
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/68bcf4b7a6949d768d45d01b6a90a629cfef18bc/ejemplo%2013.py">
           <h3>Ejercicio 13</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Ejercicio 14 -> ejemplo 15.py -->
-        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/68bcf4b7a6949d768d45d01b6a90a629cfef18bc/ejemplo%2015.py">
+        <!-- Ejercicio 14 -->
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/68bcf4b7a6949d768d45d01b6a90a629cfef18bc/ejemplo%2014.py">
           <h3>Ejercicio 14</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Ejercicio 15 -> ejemplo 16.py -->
-        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/68bcf4b7a6949d768d45d01b6a90a629cfef18bc/ejemplo%2016.py">
+        <!-- Ejercicio 15 -->
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/68bcf4b7a6949d768d45d01b6a90a629cfef18bc/ejemplo%2015.py">
           <h3>Ejercicio 15</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Ejercicio 16 -> ejemplo 17.py -->
-        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/68bcf4b7a6949d768d45d01b6a90a629cfef18bc/ejemplo%2017.py">
+        <!-- Ejercicio 16 -->
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/68bcf4b7a6949d768d45d01b6a90a629cfef18bc/ejemplo%2016.py">
           <h3>Ejercicio 16</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Ejercicio 17 -> ejemplo 18.py (commit 12b7c3f...) -->
-        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2018.py">
+        <!-- Ejercicio 17 -->
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/68bcf4b7a6949d768d45d01b6a90a629cfef18bc/ejemplo%2017.py">
           <h3>Ejercicio 17</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
+
+        <!-- Ejercicio 18 (archivo en commit 12b7c3f...) -->
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2018.py">
+          <h3>Ejercicio 18</h3>
+          <pre><code class="language-python"></code></pre>
+          <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
+        </div>
+
         <!-- Tarea 2: Calculadora Estadística -->
-<div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/ab867fb5a5045845654a14e744948d43fd0e2327/Calculadora%20Estadistica.py">
-  <h3>Tarea 2: Calculadora Estadística</h3>
-  <pre><code class="language-python"></code></pre>
-  <div class="actions">
-    <button class="btn btn-copy" data-action="copy">Copiar</button>
-    <button class="btn btn-download" data-action="download">Descargar .py</button>
-  </div>
-</div>
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/ab867fb5a5045845654a14e744948d43fd0e2327/Calculadora%20Estadistica.py">
+          <h3>Tarea 2: Calculadora Estadística</h3>
+          <pre><code class="language-python"></code></pre>
+          <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
+        </div>
 
       </div>
     </section>
@@ -257,48 +246,47 @@
     <section id="encapsulamiento" class="section">
       <h2>Encapsulamiento</h2>
       <div class="grid">
-        <!-- Ejercicio 18 -> ejemplo 19.py (commit 12b7c3f...) -->
+        <!-- Ejercicio 19 -->
         <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2019.py">
-          <h3>Ejercicio 18</h3>
-          <pre><code class="language-python"></code></pre>
-          <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
-        </div>
-
-        <!-- Ejercicio 19 -> ejemplo 20, encapsulamiento.py -->
-        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2020%2C%20encapsulamiento.py">
           <h3>Ejercicio 19</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Ejercicio 20 -> ejemplo 21.py -->
-        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2021.py">
+        <!-- Ejercicio 20 -->
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2020%2C%20encapsulamiento.py">
           <h3>Ejercicio 20</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Ejercicio 21 -> ejemplo 22.py -->
-        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2022.py">
+        <!-- Ejercicio 21 -->
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2021.py">
           <h3>Ejercicio 21</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Ejercicio 22 -> ejemplo 23.py -->
-        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2023.py">
+        <!-- Ejercicio 22 -->
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2022.py">
           <h3>Ejercicio 22</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Ejercicio 23 -> ejemplo 24.py -->
-        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2024.py">
+        <!-- Ejercicio 23 -->
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2023.py">
           <h3>Ejercicio 23</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
+        <!-- Ejercicio 24 -->
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2024.py">
+          <h3>Ejercicio 24</h3>
+          <pre><code class="language-python"></code></pre>
+          <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
+        </div>
       </div>
     </section>
 
@@ -306,167 +294,187 @@
     <section id="metodos" class="section">
       <h2>Método y Sobrecarga</h2>
       <div class="grid">
-        <!-- Ejercicio 24 -> ejemplo 25,parametro.py -->
+        <!-- Ejercicio 25 -->
         <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2025%2Cparametro.py">
-          <h3>Ejercicio 24</h3>
-          <pre><code class="language-python"></code></pre>
-          <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
-        </div>
-
-        <!-- Ejercicio 25 -> ejemplo 26.py -->
-        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2026.py">
           <h3>Ejercicio 25</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Ejercicio 26 -> ejemplo 27.py -->
-        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2027.py">
+        <!-- Ejercicio 26 -->
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2026.py">
           <h3>Ejercicio 26</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Ejercicio 27 -> ejemplo 28.py -->
-        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2028.py">
+        <!-- Ejercicio 27 -->
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2027.py">
           <h3>Ejercicio 27</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Ejercicio 28 -> ejemplo 29.py -->
-        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2029.py">
+        <!-- Ejercicio 28 -->
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2028.py">
           <h3>Ejercicio 28</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Ejercicio 29 -> ejemplo 30.py -->
-        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2030.py">
+        <!-- Ejercicio 29 -->
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2029.py">
           <h3>Ejercicio 29</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Ejercicio 30 -> ejemplo 31.py -->
-        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2031.py">
+        <!-- Ejercicio 30 -->
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2030.py">
           <h3>Ejercicio 30</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Ejercicio 31 -> ejemplo 32.py -->
-        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2032.py">
+        <!-- Ejercicio 31 -->
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2031.py">
           <h3>Ejercicio 31</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Ejercicio 32 -> ejemplo 33.py -->
-        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2033.py">
+        <!-- Ejercicio 32 -->
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2032.py">
           <h3>Ejercicio 32</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Ejercicio 33 -> ejemplo 34.py -->
-        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2034.py">
+        <!-- Ejercicio 33 -->
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2033.py">
           <h3>Ejercicio 33</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Ejercicio 34 -> ejemplo 35.py -->
-        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2035.py">
+        <!-- Ejercicio 34 -->
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2034.py">
           <h3>Ejercicio 34</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Ejercicio 35 -> ejemplo 36.py -->
-        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2036.py">
+        <!-- Ejercicio 35 -->
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2035.py">
           <h3>Ejercicio 35</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Ejercicio 36 -> ejemplo 37.py -->
-        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2037.py">
+        <!-- Ejercicio 36 -->
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2036.py">
           <h3>Ejercicio 36</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Ejercicio 37 -> ejemplo 38.py -->
-        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2038.py">
+        <!-- Ejercicio 37 -->
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2037.py">
           <h3>Ejercicio 37</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Ejercicio 38 -> ejemplo 39.py -->
-        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2039.py">
+        <!-- Ejercicio 38 -->
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2038.py">
           <h3>Ejercicio 38</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Ejercicio 39 -> ejemplo 40.py -->
-        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2040.py">
+        <!-- Ejercicio 39 -->
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2039.py">
           <h3>Ejercicio 39</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Ejercicio 40 -> Ejemplo 41.py (note uppercase) -->
-        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/Ejemplo%2041.py">
+        <!-- Ejercicio 40 -->
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2040.py">
           <h3>Ejercicio 40</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Ejercicio 41 -> ejemplo 42.py -->
-        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2042.py">
+        <!-- Ejercicio 41 -->
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/Ejemplo%2041.py">
           <h3>Ejercicio 41</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Ejercicio 42 -> ejemplo 43.py -->
-        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2043.py">
+        <!-- Ejercicio 42 -->
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2042.py">
           <h3>Ejercicio 42</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Ejercicio 43 -> ejemplo 47.py -->
-        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2047.py">
+        <!-- Ejercicio 43 -->
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2043.py">
           <h3>Ejercicio 43</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Ejercicio 44 -> ejemplo 48.py -->
-        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2048.py">
+        <!-- Ejercicio 44 -->
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2047.py">
           <h3>Ejercicio 44</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Ejercicio 45 -> ejemplo 49.py -->
-        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2049.py">
+        <!-- Ejercicio 45 -->
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2048.py">
           <h3>Ejercicio 45</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
-        <!-- Ejercicio 46 -> Ejemplo 50.py -->
-        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/Ejemplo%2050.py">
+        <!-- Ejercicio 46 -->
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2049.py">
           <h3>Ejercicio 46</h3>
           <pre><code class="language-python"></code></pre>
           <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
         </div>
 
+        <!-- Ejercicio 47 -->
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/Ejemplo%2050.py">
+          <h3>Ejercicio 47</h3>
+          <pre><code class="language-python"></code></pre>
+          <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Relaciones entre Clases -->
+    <section id="relaciones" class="section">
+      <h2>Relación entre Clases</h2>
+      <div class="grid">
+        <!-- (si quieres mover ejemplos de relación aquí, indícamelo) -->
+      </div>
+    </section>
+
+    <!-- Herencia en P.O.O -->
+    <section id="herencia_poo" class="section">
+      <h2>Herencia en P.O.O</h2>
+      <div class="grid">
+        <div class="card" data-raw="https://raw.githubusercontent.com/sadithlinaapaza-debug/Lenguaje-de-programacion-2/12b7c3fc9e358a173651577e0a0e17dfaf0e0df5/ejemplo%2047.py">
+          <h3>Ejercicio (Herencia) — ejemplo 47</h3>
+          <pre><code class="language-python"></code></pre>
+          <div class="actions"><button class="btn btn-copy" data-action="copy">Copiar</button><button class="btn btn-download" data-action="download">Descargar .py</button></div>
+        </div>
       </div>
     </section>
 
@@ -479,7 +487,7 @@
   <button class="float-home" onclick="show('home')">Inicio</button>
 
   <script>
-    // UI
+    // Función para mostrar secciones por id
     function show(id){
       document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
       const el = document.getElementById(id);
@@ -492,7 +500,7 @@
       return title.toLowerCase().replace(/\s+/g,'_').replace(/[^a-z0-9_\-\.]/g,'').substring(0,60) || 'codigo';
     }
 
-    /* ---------- Copiar / Descargar (funcional con código dinámico) ---------- */
+    // Copiar / Descargar
     document.addEventListener('click', function(e){
       const btn = e.target.closest('button[data-action]');
       if(!btn) return;
@@ -556,46 +564,27 @@
     }
 
     /* ---------- CARGA DINÁMICA DESDE GITHUB (usa data-raw en cada tarjeta) ---------- */
-    const RAW_BASE = "https://raw.githubusercontent.com/";
-
     async function loadAllCards() {
       const cards = Array.from(document.querySelectorAll('.card'));
       if(cards.length === 0) return;
-
       const tasks = cards.map(async (card) => {
         const codeEl = card.querySelector('pre code');
         if(!codeEl) return;
         codeEl.textContent = "Cargando código desde GitHub...";
-
         const dataRaw = card.getAttribute('data-raw');
-        let rawUrl = null;
-
-        if(dataRaw) {
-          rawUrl = dataRaw;
-        }
-
-        if(!rawUrl) {
+        if(!dataRaw) {
           codeEl.textContent = "(No se proporcionó ruta: añade data-raw a la tarjeta)";
           return;
         }
-
         try {
-          const resp = await fetch(rawUrl);
-          if(!resp.ok) throw new Error(`HTTP ${resp.status} al solicitar ${rawUrl}`);
+          const resp = await fetch(dataRaw);
+          if(!resp.ok) throw new Error(`HTTP ${resp.status} al solicitar ${dataRaw}`);
           const text = await resp.text();
           codeEl.textContent = text;
-
-          if(window.Prism && typeof Prism.highlightElement === 'function') {
-            try { Prism.highlightElement(codeEl); } catch(e){}
-          }
-          if(window.hljs && typeof hljs.highlightBlock === 'function') {
-            try { hljs.highlightBlock(codeEl); } catch(e){}
-          }
         } catch(err) {
           codeEl.textContent = "Error al cargar: " + err.message;
         }
       });
-
       await Promise.all(tasks);
     }
 
